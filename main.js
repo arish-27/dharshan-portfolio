@@ -14,9 +14,9 @@ const canvas = document.getElementById("hero-lightpass");
 if (canvas) {
   const context = canvas.getContext("2d");
 
-  const frameCount = 240;
+  const frameCount = 773;
   const currentFrame = index => (
-    `new_frames/frame_${(index + 1).toString().padStart(4, '0')}.jpg`
+    `dharshan-frames/frame_${(index + 1).toString().padStart(3, '0')}.jpg`
   );
 
   const images = [];
