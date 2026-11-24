@@ -824,73 +824,120 @@
 
             </section>
 
-            <!-- Dedicated Video Project Gallery Portal Banner -->
-            <section id="specialized-portals" class="max-w-7xl mx-auto px-6 py-12 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 face-corridor-grid">
-                    <!-- Portal 1: Dedicated Video Projects Page (Left Wing) -->
-                    <div class="portal-card-left float-left-ambient p-8 sm:p-9 rounded-3xl bg-[rgba(10,13,20,0.85)] border border-[#9ae600]/40 hover:border-[#9ae600] transition-all duration-300 backdrop-blur-2xl shadow-xl flex flex-col justify-between group relative overflow-hidden">
-                        <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#9ae600]/10 rounded-full blur-3xl group-hover:bg-[#9ae600]/20 transition-all"></div>
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <div class="w-14 h-14 rounded-2xl bg-[#9ae600]/15 border border-[#9ae600]/40 flex items-center justify-center text-[#9ae600] group-hover:scale-110 transition-transform">
-                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#9ae600]/15 border border-[#9ae600]/30 text-[#9ae600] font-bold">
-                                    DEDICATED SHOWCASE
-                                </span>
-                            </div>
-                            <h3 class="text-2xl font-heading font-bold text-white mb-2 group-hover:text-[#9ae600] transition-colors">
-                                Dedicated Video Projects Gallery
-                            </h3>
-                            <p class="text-xs font-mono text-[#9ae600]/90 mb-4 font-semibold">
-                                Cinematic Edits &bull; Social Media Reels &bull; YouTube Videos
-                            </p>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6 font-sans">
-                                Explore the dedicated video showcase page featuring categorized editing works, interactive cinematic player, category filters, and project breakdowns.
-                            </p>
+            <!-- Specialized Video Portals Section (Pinned Sequential HUD: Cards Appear and Disappear One by One on the Right Flank, Dharshan's Face 100% Unobstructed) -->
+            <section id="specialized-portals" class="portals-pinned-stage relative" style="height: 2000px;">
+                
+                <!-- Pinned Viewport Container (Fixed in place while user scrolls through track) -->
+                <div class="portals-pinned-viewport w-full h-screen sticky top-0 flex flex-col justify-center px-4 sm:px-8 lg:px-16 pointer-events-none overflow-hidden z-20">
+                    
+                    <!-- HUD Status Header (Top-Right Flank) -->
+                    <div class="hud-top-bar w-full max-w-lg ml-auto mb-4 flex items-center justify-between text-xs font-mono text-gray-300 border-b border-white/10 pb-2.5 pointer-events-auto">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#9ae600] animate-ping"></span>
+                            <span class="text-[#9ae600] font-bold tracking-wider">SPECIALIZED PORTALS &bull; ACTIVE HUD</span>
                         </div>
-                        <div class="pt-5 border-t border-white/10 flex items-center justify-between">
-                            <span class="text-xs font-mono text-gray-400">Standalone Gallery Page</span>
-                            <a href="projects.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#9ae600] text-black font-bold text-xs transition-all duration-300 group-hover:scale-105 shadow-lg shadow-[#9ae600]/25">
-                                <span>OPEN VIDEO GALLERY</span>
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </a>
-                        </div>
+                        <span class="text-[11px] text-gray-400 font-mono flex items-center gap-1">
+                            SCROLL DOWN &darr;
+                        </span>
                     </div>
 
-                    <!-- Portal 2: Viral Content & Retention Suite (Right Wing) -->
-                    <div class="portal-card-right float-right-ambient p-8 sm:p-9 rounded-3xl bg-[rgba(10,13,20,0.85)] border border-purple-500/30 hover:border-purple-400 transition-all duration-300 backdrop-blur-2xl shadow-xl flex flex-col justify-between group relative overflow-hidden">
-                        <div class="absolute -top-24 -right-24 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all"></div>
-                        <div>
-                            <div class="flex items-center justify-between mb-6">
-                                <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
-                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
+                    <!-- Single HUD Card Slot on the RIGHT Flank:
+                         Occupies X: 60% - 95%, leaving Dharshan's face on the left 100% unobstructed! -->
+                    <div class="hud-card-slot relative w-full max-w-lg ml-auto pointer-events-auto" style="min-height: 440px;">
+
+                        <!-- ========================================================
+                             PORTAL 1: Dedicated Video Projects Gallery
+                             ======================================================== -->
+                        <div class="hud-card portal-hud-card absolute inset-0 w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.92)] border-2 border-[#9ae600] shadow-[0_0_40px_rgba(154,230,0,0.25)] backdrop-blur-2xl flex flex-col justify-between group">
+                            <div class="absolute -top-24 -right-24 w-60 h-60 bg-[#9ae600]/10 rounded-full blur-3xl group-hover:bg-[#9ae600]/20 transition-all pointer-events-none"></div>
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-[#9ae600] tracking-widest px-3 py-1 rounded-full bg-[#9ae600]/15 border border-[#9ae600]/30">
+                                        PORTAL 01 / 02 &bull; FULL ARCHIVE
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400 font-semibold">Standalone Showcase</span>
                                 </div>
-                                <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 font-bold">
-                                    VIRAL RETENTION
-                                </span>
+                                <div class="flex items-center gap-4 mb-4 pb-4 border-b border-white/10">
+                                    <!-- Official Cinema Clapperboard Vector Icon -->
+                                    <div class="w-16 h-16 rounded-2xl bg-black border-2 border-[#9ae600] flex items-center justify-center p-2 shadow-[0_0_20px_rgba(154,230,0,0.35)] group-hover:scale-105 transition-transform shrink-0">
+                                        <img src="assets/icons/cinema_clapper.svg" alt="Cinema Clapperboard" class="w-full h-full object-contain" />
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white group-hover:text-[#9ae600] transition-colors leading-tight">
+                                            Dedicated Video <span class="text-[#9ae600]">Projects Gallery</span>
+                                        </h3>
+                                        <p class="text-xs font-mono text-gray-300 mt-1">
+                                            Cinematic Edits &bull; Social Media Reels &bull; YouTube Videos
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4 font-sans">
+                                    Explore the dedicated video showcase page featuring categorized editing works, interactive cinematic player, category filters, and project breakdowns.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-gray-300">Cinematic Edits</span>
+                                    <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-gray-300">Instagram Reels</span>
+                                    <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-gray-300">YouTube Videos</span>
+                                </div>
                             </div>
-                            <h3 class="text-2xl font-heading font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                                Short-Form Retention Mechanics
-                            </h3>
-                            <p class="text-xs font-mono text-purple-300/90 mb-4 font-semibold">
-                                CapCut Pro &bull; Speed Ramping &bull; Sound FX
-                            </p>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-6 font-sans">
-                                Optimized pacing and 3-second hook structures crafted to maximize retention rates on Instagram Reels, TikTok, and YouTube Shorts.
-                            </p>
+                            <div class="pt-4 border-t border-white/10 flex items-center justify-between mt-3">
+                                <span class="text-xs font-mono text-gray-400">Standalone Gallery Page</span>
+                                <a href="projects.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#9ae600] text-black font-bold text-xs transition-all duration-300 hover:scale-105 shadow-lg shadow-[#9ae600]/25">
+                                    <span>OPEN VIDEO GALLERY</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="pt-5 border-t border-white/10 flex items-center justify-between">
-                            <span class="text-xs font-mono text-gray-400">CapCut &amp; AE Suite</span>
-                            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300 hover:bg-purple-500 hover:text-black font-bold text-xs transition-all duration-300">
-                                <span>COMMISSION AN EDIT</span>
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </a>
+
+                        <!-- ========================================================
+                             PORTAL 2: Short-Form Retention Mechanics
+                             ======================================================== -->
+                        <div class="hud-card portal-hud-card absolute inset-0 w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.92)] border-2 border-purple-500/60 shadow-[0_0_40px_rgba(168,85,247,0.25)] backdrop-blur-2xl flex flex-col justify-between group">
+                            <div class="absolute -top-24 -right-24 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all pointer-events-none"></div>
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-purple-400 tracking-widest px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30">
+                                        PORTAL 02 / 02 &bull; RETENTION ENGINE
+                                    </span>
+                                    <span class="text-xs font-mono text-purple-300 font-semibold">Viral Mechanics</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-4 pb-4 border-b border-white/10">
+                                    <!-- Official TikTok & Instagram Reels Dual Vector Icons -->
+                                    <div class="flex items-center gap-2 shrink-0 group-hover:scale-105 transition-transform">
+                                        <div class="w-14 h-14 rounded-2xl overflow-hidden p-2 bg-black border border-cyan-400/60 shadow-[0_0_15px_rgba(37,244,238,0.3)]">
+                                            <img src="assets/icons/tiktok.svg" alt="TikTok" class="w-full h-full object-contain" />
+                                        </div>
+                                        <div class="w-14 h-14 rounded-2xl overflow-hidden p-2 bg-black border border-pink-500/60 shadow-[0_0_15px_rgba(254,44,85,0.3)]">
+                                            <img src="assets/icons/reels.svg" alt="Instagram Reels" class="w-full h-full object-contain" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white group-hover:text-purple-300 transition-colors leading-tight">
+                                            Short-Form <span class="text-purple-400">Retention Mechanics</span>
+                                        </h3>
+                                        <p class="text-xs font-mono text-gray-300 mt-1">
+                                            CapCut Pro &bull; Speed Ramping &bull; Sound FX
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4 font-sans">
+                                    Optimized pacing and 3-second hook structures crafted to maximize retention rates on Instagram Reels, TikTok, and YouTube Shorts.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-200">3-Sec Hook System</span>
+                                    <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-200">Dynamic Sound FX</span>
+                                    <span class="text-[11px] font-mono px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-200">Velocity Curves</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 flex items-center justify-between mt-3">
+                                <span class="text-xs font-mono text-gray-400">CapCut &amp; AE Suite</span>
+                                <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/20 border border-purple-500/50 text-purple-300 hover:bg-purple-500 hover:text-black font-bold text-xs transition-all duration-300 shadow-lg shadow-purple-500/20">
+                                    <span>COMMISSION AN EDIT</span>
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </a>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </section>

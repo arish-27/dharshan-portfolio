@@ -1198,14 +1198,16 @@ canvas {
 
 
 /* ===================================================
-   Pinned Sequential Tool Cards HUD Showcase
+   Pinned Sequential Tool Cards & Portals HUD Showcase
    =================================================== */
-.skills-pinned-stage {
+.skills-pinned-stage,
+.portals-pinned-stage {
     position: relative;
     width: 100%;
 }
 
-.skills-pinned-viewport {
+.skills-pinned-viewport,
+.portals-pinned-viewport {
     position: sticky;
     top: 0;
     left: 0;
@@ -1218,6 +1220,7 @@ canvas {
     z-index: 30;
 }
 
-.tool-hud-card {
+.tool-hud-card,
+.portal-hud-card {
     will-change: transform, opacity;
 }

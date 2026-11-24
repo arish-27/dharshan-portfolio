@@ -279,24 +279,52 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Specialized Portals Fade Animation
-    if (document.querySelector("#specialized-portals") && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-      gsap.fromTo("#specialized-portals .grid > div", 
-        { opacity: 0, y: 50, scale: 0.95 },
-        {
+    // 2. Pinned Sequential Specialized Portals HUD Showcase (#specialized-portals)
+    // As the user scrolls through the pinned section:
+    // Only ONE card appears at a time on the right flank, stays readable, and then disappears completely (fades out to opacity 0).
+    // Dharshan's face on the left is 100% visible and NEVER covered at any point!
+    const portalCards = gsap.utils.toArray("#specialized-portals .portal-hud-card");
+    if (portalCards.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+      
+      // Set initial state: all portal cards completely invisible
+      gsap.set(portalCards, { opacity: 0, y: 35, scale: 0.95, pointerEvents: "none" });
+
+      const portalTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#specialized-portals",
+          start: "top top",
+          end: "+=1600",
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1
+        }
+      });
+
+      // Sequential animation: one by one appear, stay, and disappear!
+      portalCards.forEach((card, index) => {
+        portalTl.to(card, {
           opacity: 1,
           y: 0,
           scale: 1,
-          stagger: 0.15,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: "#specialized-portals",
-            start: "top 85%",
-            end: "center 50%",
-            scrub: 1
-          }
-        }
-      );
+          pointerEvents: "auto",
+          duration: 0.35,
+          ease: "power2.out"
+        })
+        .to(card, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.65 // stays visible for reading and clicking
+        })
+        .to(card, {
+          opacity: 0,
+          y: -35,
+          scale: 0.95,
+          pointerEvents: "none",
+          duration: 0.35,
+          ease: "power2.in"
+        });
+      });
     }
 
     // 3. Subtle 3D Card Tilt Interaction for Creative & AI Cards
