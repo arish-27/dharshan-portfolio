@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <radialGradient id="reelsRadial" cx="30%" cy="105%" r="105%">
+      <stop offset="0%" stop-color="#fdf497"/>
+      <stop offset="5%" stop-color="#fdf497"/>
+      <stop offset="45%" stop-color="#fd5949"/>
+      <stop offset="60%" stop-color="#d6249f"/>
+      <stop offset="90%" stop-color="#285AEB"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="55" fill="url(#reelsRadial)"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" transform="translate(48, 48) scale(0.625)">
+    <!-- Main Slate -->
+    <rect x="25" y="65" width="206" height="150" rx="28" stroke-width="14"/>
+    <!-- Top Slanted Clapper Bar -->
+    <path d="M25 65 L231 65" stroke-width="14"/>
+    <!-- Clapper striped bars -->
+    <path d="M70 25 L85 65" stroke-width="12"/>
+    <path d="M120 25 L135 65" stroke-width="12"/>
+    <path d="M170 25 L185 65" stroke-width="12"/>
+    <!-- Top bar outline -->
+    <path d="M25 25 L231 25" stroke-width="14"/>
+    <!-- Play symbol in center -->
+    <polygon points="112,115 158,140 112,165" fill="#FFFFFF" stroke="none"/>
+  </g>
+</svg>
