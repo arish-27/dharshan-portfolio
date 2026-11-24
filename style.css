@@ -1195,3 +1195,29 @@ canvas {
 .tool-step-card {
     will-change: transform, opacity;
 }
+
+
+/* ===================================================
+   Pinned Sequential Tool Cards HUD Showcase
+   =================================================== */
+.skills-pinned-stage {
+    position: relative;
+    width: 100%;
+}
+
+.skills-pinned-viewport {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.hud-card-slot {
+    position: relative;
+    z-index: 30;
+}
+
+.tool-hud-card {
+    will-change: transform, opacity;
+}

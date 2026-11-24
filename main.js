@@ -231,56 +231,51 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Sequential Appear & Disappear Scroll Animation for Creative Editing Toolkit (#skills)
-    // As the user scrolls down, each tool card appears smoothly from bottom, stays visible in the center,
-    // and then disappears completely as you scroll past it, leaving Dharshan's face 100% visible and unobstructed!
-    const toolStepContainers = document.querySelectorAll(".tool-step-container");
-    if (toolStepContainers.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-      toolStepContainers.forEach((step) => {
-        const card = step.querySelector(".tool-step-card");
-        if (!card) return;
+    // 1. Pinned Sequential Tool Cards HUD Showcase (#skills)
+    // As the user scrolls through the pinned section:
+    // Only ONE card appears at a time on the right flank, stays readable, and then disappears completely (fades out to opacity 0).
+    // Dharshan's face on the left is 100% visible and NEVER covered at any point!
+    const hudCards = gsap.utils.toArray("#skills .tool-hud-card");
+    if (hudCards.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+      
+      // Set initial state: all cards completely invisible
+      gsap.set(hudCards, { opacity: 0, y: 35, scale: 0.95, pointerEvents: "none" });
 
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: step,
-            start: "top 85%",
-            end: "bottom 15%",
-            scrub: 1,
-          }
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#skills",
+          start: "top top",
+          end: "+=4000",
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1
+        }
+      });
+
+      // Sequential animation: one by one appear, stay, and disappear!
+      hudCards.forEach((card, index) => {
+        tl.to(card, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          pointerEvents: "auto",
+          duration: 0.35,
+          ease: "power2.out"
         })
-        .fromTo(card, 
-          { opacity: 0, y: 70, scale: 0.94 },
-          { opacity: 1, y: 0, scale: 1, ease: "power2.out", duration: 0.28 }
-        )
         .to(card, {
           opacity: 1,
           y: 0,
           scale: 1,
-          duration: 0.44 // stays completely visible and readable in focus zone
+          duration: 0.65 // stays visible for reading
         })
         .to(card, {
           opacity: 0,
-          y: -70,
-          scale: 0.94,
-          ease: "power2.in",
-          duration: 0.28 // disappears completely!
+          y: -35,
+          scale: 0.95,
+          pointerEvents: "none",
+          duration: 0.35,
+          ease: "power2.in"
         });
-      });
-    }
-
-    // Skills Section Header Intro Fade-out
-    const introPanel = document.querySelector(".skills-intro-panel");
-    if (introPanel && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-      gsap.to(introPanel, {
-        scrollTrigger: {
-          trigger: introPanel,
-          start: "top 70%",
-          end: "bottom 20%",
-          scrub: 1
-        },
-        opacity: 0,
-        y: -50,
-        ease: "power1.in"
       });
     }
 
