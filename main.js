@@ -24,17 +24,39 @@ if (canvas) {
   let currentFrameIndex = 0;
   let isFirstRenderDone = false;
 
+  // Ultra-smooth draw routine (no canvas resizing inside render loop)
+  function renderImage(img) {
+    if (!img || !img.complete || img.naturalWidth === 0) return;
+    
+    const canvasWidth = canvas.width;
+    const canvasHeight = canvas.height;
+    
+    // Cover scale
+    const scale = Math.max(canvasWidth / img.naturalWidth, canvasHeight / img.naturalHeight);
+    const drawWidth = img.naturalWidth * scale;
+    const drawHeight = img.naturalHeight * scale;
+    const x = (canvasWidth - drawWidth) / 2;
+    const y = (canvasHeight - drawHeight) / 2;
+
+    context.clearRect(0, 0, canvasWidth, canvasHeight);
+    context.drawImage(img, x, y, drawWidth, drawHeight);
+  }
+
   // Preload all frames
   const preloadImages = () => {
     for (let i = 0; i < frameCount; i++) {
       const img = new Image();
-      img.src = currentFrame(i);
       img.onload = () => {
         if (i === 0 && !isFirstRenderDone) {
           isFirstRenderDone = true;
-          renderImage(images[0]);
+          renderImage(img);
         }
       };
+      img.src = currentFrame(i);
+      if (i === 0 && img.complete && !isFirstRenderDone) {
+        isFirstRenderDone = true;
+        renderImage(img);
+      }
       images.push(img);
     }
   };
@@ -47,24 +69,6 @@ if (canvas) {
     if (activeImage && activeImage.complete) {
       renderImage(activeImage);
     }
-  }
-
-  // Ultra-smooth draw routine (no canvas resizing inside render loop)
-  function renderImage(img) {
-    if (!img || !img.complete || img.width === 0) return;
-    
-    const canvasWidth = canvas.width;
-    const canvasHeight = canvas.height;
-    
-    // Cover scale
-    const scale = Math.max(canvasWidth / img.width, canvasHeight / img.height);
-    const drawWidth = img.width * scale;
-    const drawHeight = img.height * scale;
-    const x = (canvasWidth - drawWidth) / 2;
-    const y = (canvasHeight - drawHeight) / 2;
-
-    context.clearRect(0, 0, canvasWidth, canvasHeight);
-    context.drawImage(img, x, y, drawWidth, drawHeight);
   }
 
   // Calculate target frame on scroll
@@ -83,8 +87,24 @@ if (canvas) {
     currentFrameIndex += (targetFrame - currentFrameIndex) * 0.18;
     
     const frameToDraw = Math.max(0, Math.min(frameCount - 1, Math.round(currentFrameIndex)));
-    const img = images[frameToDraw];
+    let img = images[frameToDraw];
     
+    // If target frame is still loading, draw the nearest available loaded frame
+    if (!img || !img.complete) {
+      for (let offset = 1; offset <= 30; offset++) {
+        const prev = frameToDraw - offset;
+        if (prev >= 0 && images[prev]?.complete) {
+          img = images[prev];
+          break;
+        }
+        const next = frameToDraw + offset;
+        if (next < frameCount && images[next]?.complete) {
+          img = images[next];
+          break;
+        }
+      }
+    }
+
     if (img && img.complete) {
       renderImage(img);
     }
