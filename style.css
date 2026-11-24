@@ -1130,7 +1130,7 @@ canvas {
         transform: translate3d(0, 0, 0);
     }
     50% {
-        transform: translate3d(-8px, -12px, 0);
+        transform: translate3d(-10px, -14px, 0);
     }
 }
 
@@ -1139,17 +1139,24 @@ canvas {
         transform: translate3d(0, 0, 0);
     }
     50% {
-        transform: translate3d(8px, -12px, 0);
+        transform: translate3d(10px, -14px, 0);
     }
 }
 
 .float-left-ambient {
-    animation: floatGentleLeft 6s ease-in-out infinite;
+    animation: floatGentleLeft 7s ease-in-out infinite;
     will-change: transform;
 }
 
 .float-right-ambient {
-    animation: floatGentleRight 6.5s ease-in-out infinite;
+    animation: floatGentleRight 7.5s ease-in-out infinite;
+    will-change: transform;
+}
+
+.tool-card-left,
+.tool-card-right,
+.portal-card-left,
+.portal-card-right {
     will-change: transform;
 }
 
@@ -1160,12 +1167,18 @@ canvas {
 
 @media (min-width: 1024px) {
     .face-corridor-grid {
-        column-gap: 7rem !important;
+        column-gap: 8rem !important;
     }
 }
 
 @media (min-width: 1280px) {
     .face-corridor-grid {
-        column-gap: 10rem !important;
+        column-gap: 14rem !important;
+    }
+}
+
+@media (min-width: 1536px) {
+    .face-corridor-grid {
+        column-gap: 18rem !important;
     }
 }

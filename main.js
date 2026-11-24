@@ -231,64 +231,109 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Dynamic Face-Clearing Floating ScrollTrigger for Creative Editing Toolkit (#skills)
+    // 1. Dynamic Face-Clearing Floating ScrollTrigger for Creative Editing Toolkit (#skills) & Portals
     // As the user scrolls into the section where Dharshan's face is centered in the 3D canvas:
     // Left wing cards float smoothly to the left, and right wing cards float to the right,
-    // parting dynamically in an elegant pattern so his face is completely clear and visible!
-    if (document.querySelector("#skills") && window.matchMedia("(min-width: 1024px)").matches) {
-      gsap.to(".tool-card-left", {
-        scrollTrigger: {
-          trigger: "#skills",
-          start: "top 75%",
-          end: "bottom 25%",
-          scrub: 1.2
-        },
-        x: -70,
-        y: -20,
-        rotation: -1.5,
-        ease: "power1.out"
-      });
+    // parting dynamically in an elegant pattern so his face is completely clear and unobstructed!
+    if (typeof ScrollTrigger !== "undefined") {
+      ScrollTrigger.matchMedia({
+        // Large & Desktop Screens: Wide Face Corridor Parting
+        "(min-width: 1024px)": function() {
+          if (document.querySelector("#skills")) {
+            gsap.to(".tool-card-left", {
+              scrollTrigger: {
+                trigger: "#skills",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1.2
+              },
+              x: -130,
+              y: -20,
+              rotation: -2,
+              ease: "power1.out"
+            });
 
-      gsap.to(".tool-card-right", {
-        scrollTrigger: {
-          trigger: "#skills",
-          start: "top 75%",
-          end: "bottom 25%",
-          scrub: 1.2
-        },
-        x: 70,
-        y: 20,
-        rotation: 1.5,
-        ease: "power1.out"
-      });
-    }
+            gsap.to(".tool-card-right", {
+              scrollTrigger: {
+                trigger: "#skills",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1.2
+              },
+              x: 130,
+              y: 20,
+              rotation: 2,
+              ease: "power1.out"
+            });
 
-    // 2. Dynamic Face-Clearing Floating ScrollTrigger for Specialized Portals (#specialized-portals)
-    if (document.querySelector("#specialized-portals") && window.matchMedia("(min-width: 1024px)").matches) {
-      gsap.to(".portal-card-left", {
-        scrollTrigger: {
-          trigger: "#specialized-portals",
-          start: "top 80%",
-          end: "bottom 25%",
-          scrub: 1.2
-        },
-        x: -80,
-        y: -15,
-        rotation: -2,
-        ease: "power1.out"
-      });
+            gsap.to(".skills-header-panel", {
+              scrollTrigger: {
+                trigger: "#skills",
+                start: "top 85%",
+                end: "top 30%",
+                scrub: 1.2
+              },
+              y: -35,
+              opacity: 0.85,
+              ease: "power1.out"
+            });
+          }
 
-      gsap.to(".portal-card-right", {
-        scrollTrigger: {
-          trigger: "#specialized-portals",
-          start: "top 80%",
-          end: "bottom 25%",
-          scrub: 1.2
+          if (document.querySelector("#specialized-portals")) {
+            gsap.to(".portal-card-left", {
+              scrollTrigger: {
+                trigger: "#specialized-portals",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1.2
+              },
+              x: -130,
+              y: -15,
+              rotation: -2,
+              ease: "power1.out"
+            });
+
+            gsap.to(".portal-card-right", {
+              scrollTrigger: {
+                trigger: "#specialized-portals",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1.2
+              },
+              x: 130,
+              y: 15,
+              rotation: 2,
+              ease: "power1.out"
+            });
+          }
         },
-        x: 80,
-        y: 15,
-        rotation: 2,
-        ease: "power1.out"
+
+        // Tablet Screens
+        "(min-width: 768px) and (max-width: 1023px)": function() {
+          if (document.querySelector("#skills")) {
+            gsap.to(".tool-card-left", {
+              scrollTrigger: {
+                trigger: "#skills",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1.2
+              },
+              x: -50,
+              ease: "power1.out"
+            });
+
+            gsap.to(".tool-card-right", {
+              scrollTrigger: {
+                trigger: "#skills",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1.2
+              },
+              x: 50,
+              ease: "power1.out"
+            });
+          }
+        }
       });
     }
 
