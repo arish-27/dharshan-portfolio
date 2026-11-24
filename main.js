@@ -231,78 +231,64 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Specialized Portals Animation (on index.html)
-    if (document.querySelector("#specialized-portals")) {
-      gsap.from("#specialized-portals .grid > div", {
+    // 1. Dynamic Face-Clearing Floating ScrollTrigger for Creative Editing Toolkit (#skills)
+    // As the user scrolls into the section where Dharshan's face is centered in the 3D canvas:
+    // Left wing cards float smoothly to the left, and right wing cards float to the right,
+    // parting dynamically in an elegant pattern so his face is completely clear and visible!
+    if (document.querySelector("#skills") && window.matchMedia("(min-width: 1024px)").matches) {
+      gsap.to(".tool-card-left", {
+        scrollTrigger: {
+          trigger: "#skills",
+          start: "top 75%",
+          end: "bottom 25%",
+          scrub: 1.2
+        },
+        x: -70,
+        y: -20,
+        rotation: -1.5,
+        ease: "power1.out"
+      });
+
+      gsap.to(".tool-card-right", {
+        scrollTrigger: {
+          trigger: "#skills",
+          start: "top 75%",
+          end: "bottom 25%",
+          scrub: 1.2
+        },
+        x: 70,
+        y: 20,
+        rotation: 1.5,
+        ease: "power1.out"
+      });
+    }
+
+    // 2. Dynamic Face-Clearing Floating ScrollTrigger for Specialized Portals (#specialized-portals)
+    if (document.querySelector("#specialized-portals") && window.matchMedia("(min-width: 1024px)").matches) {
+      gsap.to(".portal-card-left", {
         scrollTrigger: {
           trigger: "#specialized-portals",
-          start: "top 85%",
-          toggleActions: "play none none none"
+          start: "top 80%",
+          end: "bottom 25%",
+          scrub: 1.2
         },
-        y: 40,
-        opacity: 0,
-        duration: 0.85,
-        stagger: 0.2,
-        ease: "power3.out",
-        clearProps: "transform,opacity"
-      });
-    }
-
-    // 2. AdCreative Section Animation (if present)
-    if (document.querySelector("#creative-toolkit")) {
-      gsap.from(".creative-header-panel", {
-        scrollTrigger: {
-          trigger: "#creative-toolkit",
-          start: "top 82%",
-          toggleActions: "play none none none"
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.85,
-        ease: "power3.out"
+        x: -80,
+        y: -15,
+        rotation: -2,
+        ease: "power1.out"
       });
 
-      gsap.from(".creative-card", {
+      gsap.to(".portal-card-right", {
         scrollTrigger: {
-          trigger: ".creative-toolkit-section .grid",
-          start: "top 85%",
-          toggleActions: "play none none none"
+          trigger: "#specialized-portals",
+          start: "top 80%",
+          end: "bottom 25%",
+          scrub: 1.2
         },
-        y: 50,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.18,
-        ease: "power3.out",
-        clearProps: "transform,opacity"
-      });
-    }
-
-    // 3. AI Tools & Platforms Section Animation (if present)
-    if (document.querySelector("#ai-tools")) {
-      gsap.from(".ai-header-panel", {
-        scrollTrigger: {
-          trigger: "#ai-tools",
-          start: "top 82%",
-          toggleActions: "play none none none"
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.85,
-        ease: "power3.out"
-      });
-
-      gsap.from(".ai-category-group", {
-        scrollTrigger: {
-          trigger: "#ai-tools",
-          start: "top 78%",
-          toggleActions: "play none none none"
-        },
-        y: 45,
-        opacity: 0,
-        duration: 0.85,
-        stagger: 0.2,
-        ease: "power3.out",
-        clearProps: "transform,opacity"
+        x: 80,
+        y: 15,
+        rotation: 2,
+        ease: "power1.out"
       });
     }
 

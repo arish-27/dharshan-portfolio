@@ -1121,3 +1121,51 @@ canvas {
     border-color: rgba(56, 189, 248, 0.3);
     color: #e0f2fe;
 }
+
+/* ===================================================
+   Floating HUD & Face-Clearing Parallax Animations
+   =================================================== */
+@keyframes floatGentleLeft {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(-8px, -12px, 0);
+    }
+}
+
+@keyframes floatGentleRight {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(8px, -12px, 0);
+    }
+}
+
+.float-left-ambient {
+    animation: floatGentleLeft 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+.float-right-ambient {
+    animation: floatGentleRight 6.5s ease-in-out infinite;
+    will-change: transform;
+}
+
+/* Central Viewport Focus Corridor: Keeps Dharshan's Face 100% Visible */
+.face-corridor-grid {
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    .face-corridor-grid {
+        column-gap: 7rem !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .face-corridor-grid {
+        column-gap: 10rem !important;
+    }
+}
