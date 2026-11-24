@@ -1,151 +1,74 @@
-# 🚀 Arish S — Interactive 3D Animated Developer Portfolio
+# 🎬 DHARSHAN — Professional 3D Video Editor & CapCut Specialist Portfolio
 
 <div align="center">
 
-  <!-- Badges -->
-  <a href="https://shorturl.at/Hha4p">
-    <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Portfolio-9ae600?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Live Demo" />
-  </a>
-  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/HTML5_Canvas-2D_API-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="Canvas" />
+  <img src="https://img.shields.io/badge/Role-Professional%20Video%20Editor-9ae600?style=for-the-badge&logo=youtube&logoColor=black" alt="Role" />
+  <img src="https://img.shields.io/badge/Specialization-CapCut%20Pro%20Specialist-000000?style=for-the-badge&logo=tiktok&logoColor=white" alt="Specialist" />
+  <img src="https://img.shields.io/badge/Suite-Premiere%20•%20AE%20•%20DaVinci-purple?style=for-the-badge" alt="Suite" />
+  <img src="https://img.shields.io/badge/Animation-60FPS%20Canvas%203D-9ae600?style=for-the-badge" alt="Canvas" />
 
   <br/><br/>
 
   <p align="center">
-    <strong>A high-performance, cinematic, interactive portfolio featuring Apple-style scroll-driven 240-frame 3D animation, custom developer cursor, ambient drifting code particles, and glassmorphic UI.</strong>
+    <strong>A high-performance, cinematic, interactive 3D video editor portfolio featuring smooth scroll-driven 773-frame background animation, interactive video gallery player, and dedicated creative editing toolkit.</strong>
   </p>
-
-  <h3>
-    🌐 <strong>Live Preview:</strong> <a href="https://shorturl.at/Hha4p">https://shorturl.at/Hha4p</a>
-  </h3>
 
 </div>
 
 ---
 
-## 📑 Table of Contents
-
-- [✨ Key Features](#-key-features)
-- [🌐 Live Demo](#-live-demo)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📂 Project Structure](#-project-structure)
-- [🚀 Quick Start & Local Setup](#-quick-start--local-setup)
-- [🎯 Performance Optimizations](#-performance-optimizations)
-- [📬 Contact & Connect](#-contact--connect)
-- [📄 License](#-license)
-
----
-
 ## ✨ Key Features
 
-- 🎬 **Apple-Style Scroll-Linked 3D Canvas Animation**:
-  - Seamless 240-frame sequence rendered via HTML5 Canvas 2D.
-  - Linear Interpolation (Lerp) with `requestAnimationFrame` for buttery-smooth scrolling at 60+ FPS.
-- 🌌 **Ambient Monospace Floating Code Stream**:
-  - 4-directional code snippets drifting across the background (Spring Boot, React, SQL, Algorithms).
-- 🖱️ **Custom Developer Interactive Cursor**:
-  - Interactive `</>` badge cursor with magnetic trailing follower and click blink micro-interactions.
-- 💎 **Glassmorphism & Cyberpunk Neon Aesthetics**:
-  - Ultra-modern dark palette (`#080a0e`), vibrant lime accent (`#9ae600`), backdrop blur, and custom glow animations.
-- 🧰 **Dynamic Skills & Tech Stack Matrix**:
-  - Clean categorisation across Backend (Java, Spring Boot, Python), Frontend (React, JavaScript, Tailwind), Databases (MySQL, PostgreSQL, MongoDB), and DevOps (Docker, Git).
-- 💼 **Interactive Project Showcase**:
-  - Rich project cards with GitHub repository links, live demos, architecture highlights, and tech badges.
-- 📱 **100% Fully Responsive**:
-  - Adaptive layout for mobile, tablet, laptop, and ultra-wide screens.
+- 🎬 **Cinematic Scroll-Linked 3D Canvas Experience**:
+  - 773-frame background sequence rendered via HTML5 Canvas 2D with hardware acceleration.
+  - Linear Interpolation (Lerp) with `requestAnimationFrame` for 60+ FPS smooth scrolling.
+- ✂️ **Primary Specialization — CapCut Pro**:
+  - High-retention vertical short-form reels, TikToks, and YouTube Shorts.
+  - 3-second hook structures, kinetic glowing subtitles, beat sync, speed ramping, and motion effects.
+- 🧰 **Creative Editing Toolkit**:
+  - Full creative suite: CapCut Pro, Adobe Premiere Pro, Adobe After Effects, DaVinci Resolve, Adobe Photoshop, Adobe Illustrator, and Adobe Lightroom.
+- 📺 **Dedicated Video Projects Gallery (`projects.html`)**:
+  - Interactive video modal player with HTML5 video streaming and responsive modal playback.
+  - Category filters: CapCut Special Edits, Reels & Shorts, Cinematic & Travel, YouTube Long-Form, Commercial Ads, Motion Graphics, and Color Grading.
+  - Simple structure for Dharshan to add MP4 video files, YouTube embeds, or Google Drive links.
+- 💎 **Dark Glassmorphic & Neon Accent Aesthetics**:
+  - Obsidian dark palette (`#07090e`), neon green accent (`#9ae600`), backdrop blur panels, and responsive layout.
 
 ---
 
-## 🌐 Live Demo
+## 🛠️ Software & Creative Stack
 
-Experience the live interactive experience here:  
-👉 **[https://shorturl.at/Hha4p](https://shorturl.at/Hha4p)**
-
----
-
-## 🛠️ Tech Stack
-
-| Category | Technologies / Libraries |
+| Category | Creative Applications |
 | :--- | :--- |
-| **Core Frontend** | HTML5, CSS3, Vanilla JavaScript (ES6+) |
-| **Animation & Rendering** | HTML5 Canvas 2D API, RequestAnimationFrame, Lerp Physics |
-| **Styling & Theme** | Tailwind CSS CDN, Custom Vanilla CSS Glassmorphism |
-| **Typography** | Syne (Headings), Outfit (Body), Caveat (Script), Fira Code (Monospace) |
-| **Icons** | Devicon, SVG Custom Icons |
-| **Deployment** | GitHub Pages / Vercel / Netlify |
+| **Primary Specialization** | **CapCut Pro** (Short-form, Reels, Shorts, Kinetic Subtitles, Beat Sync) |
+| **Professional Video Editing** | **Adobe Premiere Pro**, **DaVinci Resolve** |
+| **Motion Graphics & VFX** | **Adobe After Effects** (Lower thirds, tracking, kinetic typography) |
+| **Graphic & Thumbnail Design** | **Adobe Photoshop**, **Adobe Illustrator** |
+| **Color Grading & Audio** | **DaVinci Resolve** (Teal & Orange, LUTs), **Adobe Audition** (Mastering) |
 
 ---
 
 ## 📂 Project Structure
 
 ```bash
-animated-portfolio/
-├── assets/                  # Static assets & icons
-├── new_frames/              # 240 high-res sequential animation frames
-│   ├── frame_0001.jpg
-│   └── ...
-├── ai-tools.html            # AI tools showcase page
-├── creative-toolkit.html    # Creative developer toolkit page
-├── index.html               # Main portfolio landing page
-├── main.js                  # Scroll animation engine & canvas logic
-├── style.css                # Custom glassmorphism, animations & typography
-├── updated_resume.pdf       # Downloadable resume
-└── README.md                # Project documentation
+dharshan-portfolio/
+├── dharshan-frames/         # 773 optimized 1080p sequential animation frames
+├── assets/                  # Icons, project previews, and branding
+├── index.html               # Main 3D cinematic portfolio landing page
+├── projects.html            # Dedicated video gallery & player page
+├── main.js                  # 60fps canvas scroll engine & cursor interactions
+├── style.css                # Glassmorphism styling, neon accents & typography
+└── README.md                # Documentation
 ```
 
 ---
 
-## 🚀 Quick Start & Local Setup
+## 📬 Contact & Inquiries
 
-To run this portfolio locally on your machine:
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/arish-27/New-3d-portfolio.git
-cd New-3d-portfolio
-```
-
-### 2. Run with a Local Development Server
-
-#### Using VS Code Live Server:
-1. Open the folder in VS Code.
-2. Right-click `index.html` and click **"Open with Live Server"**.
-
-#### Using Python:
-```bash
-# Python 3
-python -m http.server 3000
-```
-Open your browser and navigate to `http://localhost:3000`.
-
-#### Using Node `npx serve`:
-```bash
-npx serve .
-```
+- **Direct Email:** [dharshan.edits@gmail.com](mailto:dharshan.edits@gmail.com)
+- **Instagram:** [@dharshan.edits](https://instagram.com/)
+- **WhatsApp:** Available for fast-turnaround video project inquiries
 
 ---
 
-## 🎯 Performance Optimizations
-
-- **Frame Preloading Buffer**: Asynchronously caches image frames in memory to eliminate scroll lag and flickering.
-- **Scroll Restoration Control**: Automatically resets position to top on refresh to preserve animation sequence continuity.
-- **Passive Event Listeners**: Uses non-blocking scroll and resize listeners for optimal main-thread performance.
-- **Vector Icon Fonts & WebP/JPEG Optimization**: Fast asset delivery with minimal bundle overhead.
-
----
-
-## 📬 Contact & Connect
-
-**Arish S** — *Full Stack Developer*
-
-- 🌐 **Portfolio**: [https://shorturl.at/Hha4p](https://shorturl.at/Hha4p)
-- 🐙 **GitHub**: [@arish-27](https://github.com/arish-27/)
-- 💼 **LinkedIn**: [Arish S](https://www.linkedin.com/in/arish-s-a31a5737a)
-
----
-
-<div align="center">
-  <sub>Designed & Developed with ❤️ by <a href="https://github.com/arish-27">Arish S</a></sub>
-</div>
+© 2026 Dharshan. Professional Video Editor & CapCut Specialist.

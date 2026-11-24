@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Projects &amp; Showreel | DHARSHAN - Professional Video Editor &amp; CapCut Specialist</title>
+    <meta name="description"
+        content="Explore Dharshan's curated portfolio of video editing projects: viral CapCut short-form reels, cinematic color-graded films, YouTube documentaries, and kinetic motion graphics.">
+    <meta name="keywords"
+        content="Dharshan, Video Editor, CapCut Specialist, Video Portfolio, Cinematic Video, Reels Editor, Shorts Editor, Premiere Pro, After Effects, DaVinci Resolve">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DHARSHAN - Professional Video Editor &amp; CapCut Specialist">
+    <meta property="og:description"
+        content="Crafting Cinematic Stories Through Creative Video Editing. High-retention CapCut reels, cinematic films, and motion graphics.">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&family=Syne:wght@700;800&family=Caveat:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: #07090e;
+            background-image: 
+                radial-gradient(at 10% 15%, rgba(154, 230, 0, 0.07) 0px, transparent 45%),
+                radial-gradient(at 90% 25%, rgba(168, 85, 247, 0.06) 0px, transparent 50%),
+                radial-gradient(at 50% 85%, rgba(34, 211, 238, 0.05) 0px, transparent 60%);
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .filter-btn.active {
+            background-color: #9ae600;
+            color: #000000;
+            font-weight: 700;
+            border-color: #9ae600;
+            box-shadow: 0 0 20px rgba(154, 230, 0, 0.35);
+        }
+
+        .video-card {
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(154, 230, 0, 0.5);
+            box-shadow: 0 12px 35px -10px rgba(154, 230, 0, 0.2);
+        }
+
+        /* Video Modal Styles */
+        #video-modal {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#9ae600] selection:text-black">
+
+    <!-- Top Navigation Bar -->
+    <header class="site-header fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="logo font-heading text-2xl font-extrabold tracking-wider flex items-center gap-2 group">
+                <span class="text-[#9ae600] font-mono text-base group-hover:rotate-12 transition-transform duration-300">&lt;🎬&gt;</span>
+                <span class="text-white">DHARSHAN<span class="text-[#9ae600]">.EDIT</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-sans font-medium text-gray-300 bg-black/40 backdrop-blur-md px-6 py-2 rounded-full border border-white/10">
+                <a href="index.html" class="hover:text-[#9ae600] transition-colors">Home</a>
+                <a href="index.html#about" class="hover:text-[#9ae600] transition-colors">About</a>
+                <a href="index.html#skills" class="hover:text-[#9ae600] transition-colors">Editing Tools</a>
+                <a href="projects.html" class="text-[#9ae600] font-bold border-b border-[#9ae600] pb-0.5">Projects</a>
+                <a href="index.html#contact" class="hover:text-[#9ae600] transition-colors">Contact</a>
+            </nav>
+
+            <a href="index.html#contact"
+                class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#9ae600] text-black font-heading font-extrabold text-xs tracking-wider uppercase hover:bg-[#b0ff05] hover:scale-105 hover:shadow-[0_0_25px_rgba(154,230,0,0.5)] transition-all duration-300">
+                <span>LET'S WORK TOGETHER</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-24 px-6 max-w-7xl mx-auto w-full">
+
+        <!-- Page Header -->
+        <div class="glass-panel p-8 sm:p-12 mb-12 relative overflow-hidden">
+            <div class="relative z-10 max-w-3xl">
+                <div class="section-badge-pill mb-4 inline-flex">
+                    <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Selected Works —</span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Video Production Gallery</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-4">
+                    Creative Video Editing &amp; Showreel
+                </h1>
+                <p class="text-gray-300 text-sm sm:text-base font-sans leading-relaxed mb-6">
+                    A curated collection of short-form reels, cinematic storytelling, YouTube long-form edits, and motion graphic productions. Click any project to open the interactive video player with production breakdowns.
+                </p>
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#9ae600]/15 border border-[#9ae600]/40 text-[#9ae600] text-xs font-mono font-bold">
+                        <span class="w-2 h-2 rounded-full bg-[#9ae600] animate-pulse"></span>
+                        PRIMARY SPECIALIZATION: CAPCUT PRO
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-mono">
+                        4K 60FPS • HDR • 9:16 VERTICAL &amp; 16:9 CINEMATIC
+                    </span>
+                </div>
+            </div>
+
+            <!-- Ambient Glow -->
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-[#9ae600]/10 blur-3xl pointer-events-none"></div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-2.5 overflow-x-auto pb-4 mb-10 no-scrollbar">
+            <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="all">
+                All Projects (<span id="count-all">8</span>)
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="capcut">
+                CapCut Special Edits
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="reels">
+                Reels &amp; Shorts
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="cinematic">
+                Cinematic &amp; Travel
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="youtube">
+                YouTube Long-Form
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="commercial">
+                Commercial &amp; Brand
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="motion">
+                Motion Graphics
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="color">
+                Color Grading
+            </button>
+        </div>
+
+        <!-- Video Projects Grid -->
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <!-- Dynamic project cards rendered by JavaScript below -->
+        </div>
+
+        <!-- Upload / Add Videos Helper Banner for Dharshan -->
+        <div class="mt-16 glass-panel p-8 sm:p-10 rounded-3xl border border-[#9ae600]/30 bg-gradient-to-br from-neutral-900/90 via-black/90 to-neutral-900/90">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 text-xs font-mono text-[#9ae600] uppercase font-bold mb-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>EASY VIDEO MANAGEMENT</span>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-2">
+                        How to Add More of Your Own Videos to this Page
+                    </h3>
+                    <p class="text-gray-300 text-sm font-sans max-w-2xl leading-relaxed">
+                        To showcase your personal edits: drop your MP4 video files into a <code class="text-[#9ae600] bg-black/50 px-2 py-0.5 rounded font-mono">videos/</code> folder, place your cover image into <code class="text-[#9ae600] bg-black/50 px-2 py-0.5 rounded font-mono">assets/projects/</code>, and update the <code class="text-[#9ae600] bg-black/50 px-2 py-0.5 rounded font-mono">videoProjects</code> array in this HTML file. You can also link YouTube or Vimeo videos directly!
+                    </p>
+                </div>
+                <a href="index.html#contact"
+                    class="px-6 py-3 rounded-full bg-[#9ae600] text-black font-heading font-bold text-xs uppercase hover:bg-[#b0ff05] transition-all shrink-0">
+                    GET IN TOUCH
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Interactive Video Modal Player -->
+    <div id="video-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/85">
+        <div class="glass-panel w-full max-w-4xl rounded-3xl border border-white/15 overflow-hidden shadow-2xl relative flex flex-col max-h-[92vh]">
+            
+            <!-- Modal Header Bar -->
+            <div class="flex items-center justify-between px-6 py-4 bg-neutral-900/90 border-b border-white/10">
+                <div class="flex items-center gap-3">
+                    <span class="w-3 h-3 rounded-full bg-[#9ae600] animate-pulse"></span>
+                    <h4 id="modal-title" class="text-base sm:text-lg font-heading font-bold text-white truncate max-w-md">
+                        Video Title
+                    </h4>
+                </div>
+                <button id="modal-close-btn" class="w-9 h-9 rounded-full bg-white/10 hover:bg-red-500/20 hover:text-red-400 border border-white/10 flex items-center justify-center text-gray-300 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <!-- Video Player Container -->
+            <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
+                <video id="modal-video-element" class="w-full h-full object-contain" controls autoplay playsinline preload="metadata">
+                    <source id="modal-video-source" src="" type="video/mp4">
+                    Your browser does not support HTML5 video playback.
+                </video>
+
+                <!-- Demo Fallback Overlay if MP4 is not yet uploaded -->
+                <div id="modal-fallback" class="hidden absolute inset-0 bg-neutral-950 flex flex-col items-center justify-center p-8 text-center">
+                    <div class="w-20 h-20 rounded-full bg-[#9ae600]/20 border border-[#9ae600]/50 flex items-center justify-center text-[#9ae600] mb-4">
+                        <svg class="w-10 h-10 translate-x-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <h5 class="text-xl font-heading font-bold text-white mb-2">Ready for Video File Upload</h5>
+                    <p class="text-gray-300 text-sm max-w-md font-sans mb-4">
+                        Dharshan can link his local MP4 video file (e.g. <code class="text-[#9ae600]">videos/edit.mp4</code>) or YouTube/Drive link for instant playback.
+                    </p>
+                    <span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[#9ae600]">
+                        HTML5 Video Engine Active
+                    </span>
+                </div>
+            </div>
+
+            <!-- Modal Details Footer -->
+            <div class="p-6 bg-neutral-950/90 border-t border-white/10 overflow-y-auto">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-3">
+                    <div class="flex flex-wrap gap-2" id="modal-tags">
+                        <!-- Tags injected by JS -->
+                    </div>
+                    <span id="modal-duration" class="text-xs font-mono text-[#9ae600] font-bold">
+                        0:45 • 4K 60FPS
+                    </span>
+                </div>
+                <p id="modal-description" class="text-gray-300 text-sm font-sans leading-relaxed">
+                    Description text.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer max-w-7xl mx-auto px-6 pt-16 pb-12 w-full">
+        <div class="glass-panel p-8 sm:p-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
+                <div>
+                    <a href="index.html" class="logo font-heading text-2xl font-extrabold tracking-wider flex items-center gap-2">
+                        <span class="text-[#9ae600] font-mono text-base">&lt;🎬&gt;</span>
+                        <span class="text-white">DHARSHAN<span class="text-[#9ae600]">.EDIT</span></span>
+                    </a>
+                    <p class="text-gray-300 text-sm mt-2 font-sans max-w-md">
+                        Professional Video Editor &amp; CapCut Specialist. Crafting cinematic stories and high-retention short-form content.
+                    </p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dharshan.edits@gmail.com&su=Video%20Editing%20Inquiry%20-%20Dharshan" target="_blank"
+                        class="px-5 py-2.5 rounded-full bg-[#9ae600] text-black font-heading font-extrabold text-xs uppercase hover:bg-[#b0ff05] transition-all">
+                        COMMISSION AN EDIT
+                    </a>
+                    <a href="index.html" class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-gray-300 font-heading font-bold text-xs uppercase hover:text-white hover:border-white/30 transition-all">
+                        BACK TO HOME
+                    </a>
+                </div>
+            </div>
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-sans gap-4">
+                <p>&copy; 2026 Dharshan. Professional Video Editor &amp; CapCut Specialist.</p>
+                <p class="font-mono text-gray-400">CapCut Pro &bull; Premiere Pro &bull; After Effects &bull; DaVinci Resolve</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Projects Data & Interactive Script -->
+    <script>
+        // =========================================================================
+        // DHARSHAN'S VIDEO PROJECTS DATABASE
+        // You can easily add your own videos here:
+        // Set 'videoSrc' to your mp4 path (e.g., 'videos/my-video.mp4') or leave blank for demo player!
+        // =========================================================================
+        const videoProjects = [
+            {
+                id: "travel-cinematic",
+                title: "Tokyo Neon Dreams – 4K Cinematic Travel Narrative",
+                category: ["cinematic", "capcut", "color"],
+                categoryLabel: "Cinematic Travel",
+                duration: "2:45",
+                quality: "4K 60FPS",
+                aspect: "16:9 Widescreen",
+                description: "Multi-layer cinematic travel montage crafted with seamless speed ramping, directional whip-pans, and atmospheric ambient foley sound design. Features custom teal-and-orange LUT color balance.",
+                tools: ["CapCut Pro", "Premiere Pro", "DaVinci Resolve", "Speed Ramp"],
+                accentColor: "#9ae600",
+                videoSrc: "", // Add local file e.g. "videos/tokyo.mp4"
+                posterBg: "from-blue-900/60 via-purple-900/40 to-black"
+            },
+            {
+                id: "viral-reels",
+                title: "10x Productivity Hacks – Viral Short-Form Reel",
+                category: ["reels", "capcut"],
+                categoryLabel: "Social Media Reel",
+                duration: "0:42",
+                quality: "9:16 Vertical",
+                aspect: "Instagram & TikTok",
+                description: "Engineered 3-second psychological hook mechanics with fast-paced cuts, optical zoom punches, animated kinetic subtitles with word-by-word glowing highlights, and synchronized sound effects. Generated 2.4M+ organic views benchmark.",
+                tools: ["CapCut Specialist", "Kinetic Subtitles", "Beat Sync", "Sound FX"],
+                accentColor: "#9ae600",
+                videoSrc: "",
+                posterBg: "from-green-900/60 via-neutral-900/40 to-black"
+            },
+            {
+                id: "youtube-doc",
+                title: "The Rise of Artificial Intelligence – YouTube Documentary",
+                category: ["youtube", "motion"],
+                categoryLabel: "YouTube Long-Form",
+                duration: "12:30",
+                quality: "1080p60",
+                aspect: "16:9 Documentary",
+                description: "Full-length episodic documentary edit featuring structured pacing, multi-track audio mixing, engaging B-roll pacing, custom motion graphic lower-thirds, animated timeline charts, and studio vocal mastering.",
+                tools: ["Premiere Pro", "After Effects", "Photoshop", "Audio Master"],
+                accentColor: "#22d3ee",
+                videoSrc: "",
+                posterBg: "from-cyan-900/60 via-neutral-900/40 to-black"
+            },
+            {
+                id: "brand-promo",
+                title: "Urban Streetwear Fall Collection – Kinetic Commercial",
+                category: ["commercial", "motion", "capcut"],
+                categoryLabel: "Brand Commercial",
+                duration: "0:30",
+                quality: "4K Multi-Aspect",
+                aspect: "Commercial Ad",
+                description: "High-octane commercial promo blending product masking, 3D text tracking, kinetic typography, and synchronized bass-heavy audio design. Tailored for YouTube Ads and Instagram Stories.",
+                tools: ["After Effects", "CapCut Pro", "Illustrator", "Motion Graphics"],
+                accentColor: "#a855f7",
+                videoSrc: "",
+                posterBg: "from-purple-900/60 via-pink-900/40 to-black"
+            },
+            {
+                id: "sound-design-reel",
+                title: "Cinematic Sound Design & Bass Drop Reel",
+                category: ["reels", "capcut", "color"],
+                categoryLabel: "Reels & Shorts",
+                duration: "0:28",
+                quality: "9:16 Vertical",
+                aspect: "Reels / TikTok",
+                description: "Frame-by-frame sound effects synchronization (risers, whooshes, vinyl stops, bass drops) matching rapid visual transitions and cinematic glitch overlays for maximum visceral impact.",
+                tools: ["CapCut Pro", "Audition", "Sound FX", "Keyframing"],
+                accentColor: "#9ae600",
+                videoSrc: "",
+                posterBg: "from-amber-900/60 via-neutral-900/40 to-black"
+            },
+            {
+                id: "cyberpunk-grade",
+                title: "Night City Cyberpunk – 4K Color Grading Study",
+                category: ["color", "cinematic"],
+                categoryLabel: "Color Grading",
+                duration: "1:15",
+                quality: "4K HDR",
+                aspect: "16:9 Cinema Scope",
+                description: "Deep color grading transformation taking flat LOG camera footage into a high-contrast cinematic palette with separated neon cyan and magenta tones, balanced skin tones, and rich shadow roll-off.",
+                tools: ["DaVinci Resolve", "Premiere Pro", "LUT Balance", "Color Curves"],
+                accentColor: "#06b6d4",
+                videoSrc: "",
+                posterBg: "from-teal-900/60 via-blue-900/40 to-black"
+            },
+            {
+                id: "fitness-workout",
+                title: "Athlete High-BPM Workout – Speed Ramp Montage",
+                category: ["reels", "capcut"],
+                categoryLabel: "High-BPM Reel",
+                duration: "0:35",
+                quality: "9:16 Vertical",
+                aspect: "Reels / Shorts",
+                description: "Dynamic gym motivation reel edited with optical flow speed ramps, flash impacts, and aggressive beat synchronization that drives viewers to replay repeatedly.",
+                tools: ["CapCut Specialist", "Speed Ramping", "Beat Matching"],
+                accentColor: "#9ae600",
+                videoSrc: "",
+                posterBg: "from-red-900/60 via-neutral-900/40 to-black"
+            },
+            {
+                id: "saas-explainer",
+                title: "Next-Gen SaaS Platform – Kinetic Motion Explainer",
+                category: ["motion", "commercial"],
+                categoryLabel: "Motion Graphics",
+                duration: "1:05",
+                quality: "1080p60",
+                aspect: "16:9 Explainer",
+                description: "Clean vector animation and kinetic typography transitions illustrating modern software features with smooth camera moves, UI mockups, and engaging sound accents.",
+                tools: ["After Effects", "Illustrator", "Photoshop", "Kinetic Type"],
+                accentColor: "#38bdf8",
+                videoSrc: "",
+                posterBg: "from-indigo-900/60 via-neutral-900/40 to-black"
+            }
+        ];
+
+        // Render Projects Grid
+        const container = document.getElementById("projects-container");
+
+        function renderProjects(filter = "all") {
+            container.innerHTML = "";
+            const filtered = filter === "all" 
+                ? videoProjects 
+                : videoProjects.filter(p => p.category.includes(filter));
+
+            filtered.forEach(project => {
+                const card = document.createElement("div");
+                card.className = "video-card group glass-panel rounded-3xl p-5 border border-white/10 flex flex-col justify-between";
+                card.setAttribute("data-id", project.id);
+
+                card.innerHTML = `
+                    <div>
+                        <!-- Video Thumbnail Mockup -->
+                        <div class="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br ${project.posterBg} border border-white/10 mb-5 flex items-center justify-center cursor-pointer group/thumb" onclick="openModal('${project.id}')">
+                            <!-- Overlay Play Button -->
+                            <div class="w-14 h-14 rounded-full bg-black/60 border border-white/20 flex items-center justify-center text-white group-hover/thumb:scale-110 group-hover/thumb:bg-[#9ae600] group-hover/thumb:text-black group-hover/thumb:border-[#9ae600] transition-all duration-300 shadow-xl">
+                                <svg class="w-6 h-6 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                            
+                            <!-- Duration & Quality Badges -->
+                            <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono text-[#9ae600] border border-white/10 font-bold">
+                                ${project.quality}
+                            </div>
+                            <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md text-[10px] font-mono text-white border border-white/10 font-bold flex items-center gap-1">
+                                <svg class="w-3 h-3 text-[#9ae600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <span>${project.duration}</span>
+                            </div>
+                        </div>
+
+                        <!-- Project Category & Title -->
+                        <div class="mb-3">
+                            <span class="text-[11px] font-mono uppercase tracking-wider text-[#9ae600] font-semibold">
+                                ${project.categoryLabel} &bull; ${project.aspect}
+                            </span>
+                            <h3 class="text-lg font-heading font-bold text-white group-hover:text-[#9ae600] transition-colors mt-1 leading-snug">
+                                ${project.title}
+                            </h3>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-xs sm:text-sm text-gray-300 font-sans leading-relaxed mb-4 line-clamp-3">
+                            ${project.description}
+                        </p>
+                    </div>
+
+                    <!-- Tools & Watch Button -->
+                    <div class="pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            ${project.tools.map(t => `<span class="tag text-[10px] px-2 py-0.5">${t}</span>`).join('')}
+                        </div>
+                        <button onclick="openModal('${project.id}')" class="w-full py-2.5 rounded-full bg-white/5 hover:bg-[#9ae600] hover:text-black border border-white/10 hover:border-[#9ae600] text-xs font-mono font-bold text-white transition-all flex items-center justify-center gap-2">
+                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            <span>WATCH VIDEO &amp; BREAKDOWN</span>
+                        </button>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Category Filter Logic
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                filterButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                const filter = btn.getAttribute("data-filter");
+                renderProjects(filter);
+            });
+        });
+
+        // Initial Render
+        renderProjects("all");
+
+        // Modal Functionality
+        const modal = document.getElementById("video-modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalDescription = document.getElementById("modal-description");
+        const modalDuration = document.getElementById("modal-duration");
+        const modalTags = document.getElementById("modal-tags");
+        const modalVideo = document.getElementById("modal-video-element");
+        const modalSource = document.getElementById("modal-video-source");
+        const modalFallback = document.getElementById("modal-fallback");
+        const modalCloseBtn = document.getElementById("modal-close-btn");
+
+        function openModal(projectId) {
+            const project = videoProjects.find(p => p.id === projectId);
+            if (!project) return;
+
+            modalTitle.textContent = project.title;
+            modalDescription.textContent = project.description;
+            modalDuration.textContent = `${project.duration} • ${project.quality} • ${project.aspect}`;
+            
+            modalTags.innerHTML = project.tools.map(t => 
+                `<span class="tag text-xs px-2.5 py-1">${t}</span>`
+            ).join('');
+
+            if (project.videoSrc && project.videoSrc.trim() !== "") {
+                modalSource.src = project.videoSrc;
+                modalVideo.load();
+                modalVideo.classList.remove("hidden");
+                modalFallback.classList.add("hidden");
+                modalVideo.play().catch(e => console.log("Autoplay prevented:", e));
+            } else {
+                modalVideo.pause();
+                modalVideo.classList.add("hidden");
+                modalFallback.classList.remove("hidden");
+            }
+
+            modal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            modal.classList.add("hidden");
+            modalVideo.pause();
+            modalSource.src = "";
+            document.body.style.overflow = "";
+        }
+
+        modalCloseBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+                closeModal();
+            }
+        });
+
+        // Check if hash matches project
+        window.addEventListener("DOMContentLoaded", () => {
+            const hash = window.location.hash.replace("#", "");
+            if (hash) {
+                const found = videoProjects.find(p => p.id === hash);
+                if (found) {
+                    openModal(found.id);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
