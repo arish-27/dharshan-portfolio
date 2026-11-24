@@ -111,11 +111,14 @@
                     <span class="font-script text-[#9ae600] text-2xl -rotate-6 inline-block font-bold">Selected Works —</span>
                     <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600]">Video Production Gallery</span>
                 </div>
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-4">
-                    Creative Video Editing &amp; Showreel
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-2">
+                    MY CREATIVE WORK
                 </h1>
+                <p class="text-xl sm:text-2xl font-heading text-[#9ae600] font-semibold mb-4">
+                    Selected Video Editing Projects
+                </p>
                 <p class="text-gray-300 text-sm sm:text-base font-sans leading-relaxed mb-6">
-                    A curated collection of short-form reels, cinematic storytelling, YouTube long-form edits, and motion graphic productions. Click any project to open the interactive video player with production breakdowns.
+                    A curated cinematic video gallery featuring short-form reels, cinematic storytelling, YouTube long-form edits, and motion graphic productions. Upload-ready project cards with interactive playback.
                 </p>
                 <div class="flex flex-wrap items-center gap-3">
                     <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#9ae600]/15 border border-[#9ae600]/40 text-[#9ae600] text-xs font-mono font-bold">
@@ -135,25 +138,28 @@
         <!-- Category Filter Tabs -->
         <div class="flex items-center gap-2.5 overflow-x-auto pb-4 mb-10 no-scrollbar">
             <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="all">
-                All Projects (<span id="count-all">8</span>)
+                All Projects
             </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="capcut">
                 CapCut Special Edits
             </button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="reels">
-                Reels &amp; Shorts
-            </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="cinematic">
-                Cinematic &amp; Travel
+                Cinematic Edits
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="reels">
+                Instagram Reels
             </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="youtube">
-                YouTube Long-Form
+                YouTube Videos
             </button>
-            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="commercial">
-                Commercial &amp; Brand
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="promotional">
+                Promotional Videos
             </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="motion">
                 Motion Graphics
+            </button>
+            <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="transitions">
+                Creative Transitions
             </button>
             <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-mono uppercase tracking-wider bg-white/5 text-gray-300 border border-white/10 hover:border-[#9ae600] hover:text-[#9ae600]" data-filter="color">
                 Color Grading
@@ -286,7 +292,7 @@
             {
                 id: "travel-cinematic",
                 title: "Tokyo Neon Dreams – 4K Cinematic Travel Narrative",
-                category: ["cinematic", "capcut", "color"],
+                category: ["cinematic", "capcut", "color", "transitions"],
                 categoryLabel: "Cinematic Travel",
                 duration: "2:45",
                 quality: "4K 60FPS",
@@ -328,8 +334,8 @@
             {
                 id: "brand-promo",
                 title: "Urban Streetwear Fall Collection – Kinetic Commercial",
-                category: ["commercial", "motion", "capcut"],
-                categoryLabel: "Brand Commercial",
+                category: ["promotional", "motion", "capcut", "transitions"],
+                categoryLabel: "Promotional Video",
                 duration: "0:30",
                 quality: "4K Multi-Aspect",
                 aspect: "Commercial Ad",
@@ -342,7 +348,7 @@
             {
                 id: "sound-design-reel",
                 title: "Cinematic Sound Design & Bass Drop Reel",
-                category: ["reels", "capcut", "color"],
+                category: ["reels", "capcut", "transitions"],
                 categoryLabel: "Reels & Shorts",
                 duration: "0:28",
                 quality: "9:16 Vertical",
@@ -370,7 +376,7 @@
             {
                 id: "fitness-workout",
                 title: "Athlete High-BPM Workout – Speed Ramp Montage",
-                category: ["reels", "capcut"],
+                category: ["reels", "capcut", "transitions"],
                 categoryLabel: "High-BPM Reel",
                 duration: "0:35",
                 quality: "9:16 Vertical",
@@ -384,7 +390,7 @@
             {
                 id: "saas-explainer",
                 title: "Next-Gen SaaS Platform – Kinetic Motion Explainer",
-                category: ["motion", "commercial"],
+                category: ["motion", "promotional"],
                 categoryLabel: "Motion Graphics",
                 duration: "1:05",
                 quality: "1080p60",
