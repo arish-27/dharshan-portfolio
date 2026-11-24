@@ -1182,3 +1182,16 @@ canvas {
         column-gap: 18rem !important;
     }
 }
+
+
+/* ===================================================
+   Sequential Appear & Disappear Tool Step HUD
+   =================================================== */
+.tool-step-container {
+    position: relative;
+    pointer-events: auto;
+}
+
+.tool-step-card {
+    will-change: transform, opacity;
+}

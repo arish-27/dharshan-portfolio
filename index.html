@@ -519,279 +519,340 @@
 
             <!-- Creative Editing Toolkit Section -->
             <!-- Creative Editing Toolkit Section (Two-Wing Flanking Layout: Center Corridor Leaves Dharshan's Face 100% Unobstructed) -->
-            <section id="skills" class="skills-section max-w-7xl mx-auto px-4 sm:px-6 py-20 relative">
+            <!-- Creative Editing Toolkit Section (Sequential Appear & Disappear HUD: Dharshan's Face is 100% Unobstructed) -->
+            <section id="skills" class="skills-section max-w-7xl mx-auto px-4 sm:px-6 relative">
                 
-                <!-- Sleek Floating Header: Compact & Positioned High to Avoid Covering Dharshan's Head -->
-                <div class="skills-header-panel glass-panel py-6 px-8 sm:px-10 text-center max-w-3xl mx-auto mb-16 rounded-full border border-white/10 bg-black/60 backdrop-blur-xl shadow-2xl">
-                    <div class="section-badge-pill mb-2 inline-flex items-center gap-2">
-                        <span class="font-script text-[#9ae600] text-xl -rotate-6 inline-block font-bold">Tools —</span>
-                        <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600] font-semibold">Editing Arsenal</span>
+                <!-- Section Intro: Appears & Fades as You Scroll In -->
+                <div class="skills-intro-panel min-h-[50vh] flex flex-col items-center justify-center text-center px-4 relative z-10">
+                    <div class="glass-panel py-8 px-10 rounded-3xl border border-white/10 bg-black/60 backdrop-blur-xl shadow-2xl max-w-2xl mx-auto">
+                        <div class="section-badge-pill mb-3 inline-flex items-center gap-2">
+                            <span class="font-script text-[#9ae600] text-xl -rotate-6 inline-block font-bold">Tools —</span>
+                            <span class="font-mono text-xs uppercase tracking-widest text-[#9ae600] font-semibold">Editing Arsenal</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-heading font-bold text-white tracking-wide">
+                            CREATIVE EDITING TOOLKIT
+                        </h2>
+                        <p class="text-gray-300 text-xs sm:text-sm mt-3 font-sans max-w-lg mx-auto leading-relaxed">
+                            Professional tools I use to transform raw footage into viral, cinematic stories. Scroll to explore each tool sequentially.
+                        </p>
+                        <div class="mt-5 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#9ae600]/15 border border-[#9ae600]/40 text-[#9ae600] text-xs font-mono font-bold animate-pulse">
+                            <span>SCROLL TO VIEW TOOLS</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                        </div>
                     </div>
-                    <h2 class="text-2xl sm:text-4xl font-heading font-bold text-white tracking-wide">
-                        CREATIVE EDITING TOOLKIT
-                    </h2>
-                    <p class="text-gray-300 text-xs sm:text-sm mt-1.5 font-sans max-w-xl mx-auto leading-relaxed">
-                        Dual-wing professional creative suites flanking the central workstation.
-                    </p>
                 </div>
 
-                <!-- TWO-WING FLANKING LAYOUT (LEFT WING & RIGHT WING with OPEN CENTER CORRIDOR) -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-y-10 face-corridor-grid mb-12">
-                    
+                <!-- SEQUENTIAL TOOL CARDS: Each card appears and disappears sequentially as the user scrolls,
+                     positioned on the right flank so Dharshan's face on the left is 100% visible at all times! -->
+                <div class="skills-step-stream flex flex-col relative z-10">
+
                     <!-- ========================================================
-                         LEFT WING: Lead Editing & Motion Suite
-                         (Floats gracefully to the left as Dharshan's face appears)
+                         STEP 1: CapCut Specialist (Primary Specialization)
                          ======================================================== -->
-                    <div class="flex flex-col gap-8">
-                        
-                        <!-- 1. CROWN JEWEL: CapCut Lead Specialist (Primary Specialization) -->
-                        <div class="tool-card-left float-left-ambient p-7 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.85)] border-2 border-[#9ae600] shadow-[0_0_35px_rgba(154,230,0,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(154,230,0,0.35)] flex flex-col justify-between group">
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border-2 border-[#9ae600] shadow-[0_0_40px_rgba(154,230,0,0.25)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_60px_rgba(154,230,0,0.4)] flex flex-col justify-between group">
                             <div>
-                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-16 h-16 rounded-2xl bg-black border-2 border-[#9ae600] flex items-center justify-center p-2.5 shadow-[0_0_20px_rgba(154,230,0,0.35)] group-hover:scale-105 transition-transform shrink-0">
-                                            <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="currentColor">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.189 6.442V2.671l-4.535 2.383V4.91c.002-1.505-1.078-2.411-2.638-2.411H2.64C.993 2.5 0 3.407 0 4.91V8.72L6.354 12 0 15.316v3.8C0 20.595 1 21.5 2.64 21.5h14.373c1.56 0 2.639-.907 2.639-2.382v-.197l4.536 2.409v-3.828L13.64 12 24.19 6.443zM9.982 13.873l7.797 4.083H2.157l7.825-4.083zm7.741-7.828l-7.742 4.057-7.825-4.057h15.567z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#9ae600]/20 text-[#9ae600] border border-[#9ae600]/50 font-mono text-[10px] font-bold uppercase tracking-wider mb-1">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#9ae600] animate-ping"></span>
-                                                PRIMARY SPECIALIZATION
-                                            </div>
-                                            <h3 class="text-xl sm:text-2xl font-heading font-extrabold text-white">
-                                                CapCut <span class="text-[#9ae600]">Specialist</span>
-                                            </h3>
-                                        </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-[#9ae600] tracking-widest px-3 py-1 rounded-full bg-[#9ae600]/15 border border-[#9ae600]/30">
+                                        TOOL 01 / 08 &bull; PRIMARY SPECIALIZATION
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Lead Editor</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="w-16 h-16 rounded-2xl bg-black border-2 border-[#9ae600] flex items-center justify-center p-2.5 shadow-[0_0_20px_rgba(154,230,0,0.35)] group-hover:scale-105 transition-transform shrink-0">
+                                        <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="currentColor">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.189 6.442V2.671l-4.535 2.383V4.91c.002-1.505-1.078-2.411-2.638-2.411H2.64C.993 2.5 0 3.407 0 4.91V8.72L6.354 12 0 15.316v3.8C0 20.595 1 21.5 2.64 21.5h14.373c1.56 0 2.639-.907 2.639-2.382v-.197l4.536 2.409v-3.828L13.64 12 24.19 6.443zM9.982 13.873l7.797 4.083H2.157l7.825-4.083zm7.741-7.828l-7.742 4.057-7.825-4.057h15.567z" />
+                                        </svg>
                                     </div>
-                                    <div class="text-left sm:text-right">
-                                        <span class="text-[10px] font-mono text-gray-400 block">Tier</span>
-                                        <span class="text-base sm:text-lg font-heading font-bold text-[#9ae600]">Lead Editor</span>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white">
+                                            CapCut <span class="text-[#9ae600]">Specialist</span>
+                                        </h3>
+                                        <p class="text-xs font-mono text-gray-300 mt-1">
+                                            High-Retention Short-Form &bull; Viral Reels &bull; YouTube Shorts
+                                        </p>
                                     </div>
                                 </div>
-
-                                <p class="text-xs sm:text-sm font-mono text-gray-300 mb-3 font-semibold">
-                                    High-Retention Short-Form &bull; Viral Reels &bull; YouTube Shorts &bull; Cinematic Edits
-                                </p>
                                 <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
                                     Creating engaging short-form and long-form video content with professional editing techniques, smooth transitions, creative effects, beat synchronization, keyframe animation, motion effects, and cinematic visual storytelling.
                                 </p>
                             </div>
-
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag border-[#9ae600]/40 text-[#9ae600] bg-[#9ae600]/10 font-bold text-[11px]">Professional Video Editing</span>
-                                <span class="tag border-[#9ae600]/40 text-[#9ae600] bg-[#9ae600]/10 font-bold text-[11px]">Reels &amp; YouTube Shorts</span>
-                                <span class="tag border-[#9ae600]/40 text-[#9ae600] bg-[#9ae600]/10 font-bold text-[11px]">Cinematic Transitions</span>
-                                <span class="tag text-[11px]">Beat Synchronization</span>
-                                <span class="tag text-[11px]">Keyframe Animation</span>
-                                <span class="tag text-[11px]">Speed Ramping</span>
-                                <span class="tag text-[11px]">Creative Storytelling</span>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag border-[#9ae600]/40 text-[#9ae600] bg-[#9ae600]/10 font-bold text-xs">Professional Video Editing</span>
+                                <span class="tag border-[#9ae600]/40 text-[#9ae600] bg-[#9ae600]/10 font-bold text-xs">Reels &amp; YouTube Shorts</span>
+                                <span class="tag border-[#9ae600]/40 text-[#9ae600] bg-[#9ae600]/10 font-bold text-xs">Cinematic Transitions</span>
+                                <span class="tag text-xs">Beat Synchronization</span>
+                                <span class="tag text-xs">Keyframe Animation</span>
+                                <span class="tag text-xs">Speed Ramping</span>
+                                <span class="tag text-xs">Creative Storytelling</span>
                             </div>
                         </div>
-
-                        <!-- 2. Adobe Premiere Pro -->
-                        <div class="tool-card-left float-left-ambient p-7 sm:p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
-                            <div>
-                                <div class="w-14 h-14 rounded-2xl bg-[#00005B] border border-[#EA77FF]/40 flex items-center justify-center font-heading font-black text-[#EA77FF] text-2xl shadow-lg shadow-[#EA77FF]/20 mb-5 group-hover:scale-105 transition-transform">
-                                    Pr
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5">Adobe Premiere Pro</h3>
-                                <p class="text-xs font-mono text-purple-300 mb-3 font-semibold">Timeline &amp; Multi-Layer Editing</p>
-                                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                                    Professional timeline editing, multi-layer video composition, precise audio synchronization, dynamic J-cuts/L-cuts, pacing, and broadcast transitions.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag text-[11px]">Timeline Editing</span>
-                                <span class="tag text-[11px]">Multi-Layer Cuts</span>
-                                <span class="tag text-[11px]">Audio Sync</span>
-                                <span class="tag text-[11px]">Transitions</span>
-                            </div>
-                        </div>
-
-                        <!-- 3. Adobe After Effects -->
-                        <div class="tool-card-left float-left-ambient p-7 sm:p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-indigo-500/30 hover:border-indigo-400 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
-                            <div>
-                                <div class="w-14 h-14 rounded-2xl bg-[#00005B] border border-[#9999FF]/40 flex items-center justify-center font-heading font-black text-[#9999FF] text-2xl shadow-lg shadow-[#9999FF]/20 mb-5 group-hover:scale-105 transition-transform">
-                                    Ae
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5">Adobe After Effects</h3>
-                                <p class="text-xs font-mono text-indigo-300 mb-3 font-semibold">Motion Graphics &amp; Visual Effects</p>
-                                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                                    Creating kinetic typography, 3D camera tracking, custom visual effects (VFX), compositing, title sequences, and intricate keyframe animations.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag text-[11px]">Motion Graphics</span>
-                                <span class="tag text-[11px]">Visual Effects</span>
-                                <span class="tag text-[11px]">Text Animation</span>
-                                <span class="tag text-[11px]">3D Tracking</span>
-                            </div>
-                        </div>
-
-                        <!-- 4. Adobe Audition & Media Encoder -->
-                        <div class="tool-card-left float-left-ambient p-7 sm:p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-emerald-500/30 hover:border-emerald-400 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
-                            <div>
-                                <div class="flex items-center gap-3 mb-5">
-                                    <div class="w-12 h-12 rounded-2xl bg-[#001E36] border border-[#00E699]/40 flex items-center justify-center font-heading font-black text-[#00E699] text-xl shadow-lg group-hover:scale-105 transition-transform">
-                                        Au
-                                    </div>
-                                    <div class="w-12 h-12 rounded-2xl bg-[#00005B] border border-[#FF7700]/40 flex items-center justify-center font-heading font-black text-[#FF7700] text-xl shadow-lg group-hover:scale-105 transition-transform">
-                                        Me
-                                    </div>
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5">Adobe Audition &amp; Media Encoder</h3>
-                                <p class="text-xs font-mono text-emerald-300 mb-3 font-semibold">Audio Mastering &amp; Video Exporting</p>
-                                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                                    Vocal audio clean-up, studio noise suppression, sound mastering, along with high-bitrate ProRes/H.264 video rendering and multi-platform media encoding.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag text-[11px]">Audio Mastering</span>
-                                <span class="tag text-[11px]">Noise Reduction</span>
-                                <span class="tag text-[11px]">Media Encoder</span>
-                                <span class="tag text-[11px]">ProRes Exports</span>
-                            </div>
-                        </div>
-
                     </div>
 
                     <!-- ========================================================
-                         RIGHT WING: Color Grading, Design & Viral Production Suite
-                         (Floats gracefully to the right as Dharshan's face appears)
+                         STEP 2: Adobe Premiere Pro
                          ======================================================== -->
-                    <div class="flex flex-col gap-8">
-                        
-                        <!-- 1. RIGHT CROWN JEWEL: Short-Form Retention & Viral Pacing Mechanics -->
-                        <div class="tool-card-right float-right-ambient p-7 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.85)] border-2 border-purple-500/50 shadow-[0_0_35px_rgba(168,85,247,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(168,85,247,0.35)] flex flex-col justify-between group">
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border border-purple-500/40 shadow-[0_0_35px_rgba(168,85,247,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(168,85,247,0.35)] flex flex-col justify-between group">
                             <div>
-                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-16 h-16 rounded-2xl bg-purple-500/15 border-2 border-purple-500/50 flex items-center justify-center p-3 shadow-lg shadow-purple-500/25 group-hover:scale-105 transition-transform shrink-0 text-purple-400">
-                                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/50 font-mono text-[10px] font-bold uppercase tracking-wider mb-1">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping"></span>
-                                                VIRAL MECHANICS
-                                            </div>
-                                            <h3 class="text-xl sm:text-2xl font-heading font-extrabold text-white">
-                                                Retention <span class="text-purple-400">Pacing &amp; SFX</span>
-                                            </h3>
-                                        </div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-purple-300 tracking-widest px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30">
+                                        TOOL 02 / 08 &bull; INDUSTRY STANDARD
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Timeline Master</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="w-16 h-16 rounded-2xl bg-[#00005B] border border-[#EA77FF]/40 flex items-center justify-center font-heading font-black text-[#EA77FF] text-2xl shadow-lg shadow-[#EA77FF]/25 group-hover:scale-105 transition-transform shrink-0">
+                                        Pr
                                     </div>
-                                    <div class="text-left sm:text-right">
-                                        <span class="text-[10px] font-mono text-gray-400 block">Framework</span>
-                                        <span class="text-base sm:text-lg font-heading font-bold text-purple-300">Viral Hooks</span>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white">Adobe Premiere Pro</h3>
+                                        <p class="text-xs font-mono text-purple-300 mt-1">Timeline &amp; Multi-Layer Editing</p>
                                     </div>
                                 </div>
-
-                                <p class="text-xs sm:text-sm font-mono text-purple-300 mb-3 font-semibold">
-                                    3-Second Hook Retention &bull; Velocity Curve &bull; Sound Design &bull; Visual Rhythm
+                                <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                                    Professional timeline editing, multi-layer video composition, precise audio synchronization, dynamic J-cuts/L-cuts, pacing, and broadcast transitions.
                                 </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag text-xs">Timeline Editing</span>
+                                <span class="tag text-xs">Multi-Layer Cuts</span>
+                                <span class="tag text-xs">Audio Sync</span>
+                                <span class="tag text-xs">Transitions</span>
+                                <span class="tag text-xs">Pacing Control</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         STEP 3: Adobe After Effects
+                         ======================================================== -->
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border border-indigo-500/40 shadow-[0_0_35px_rgba(99,102,241,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(99,102,241,0.35)] flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-indigo-300 tracking-widest px-3 py-1 rounded-full bg-indigo-500/15 border border-indigo-500/30">
+                                        TOOL 03 / 08 &bull; MOTION &amp; VFX
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">VFX Compositing</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="w-16 h-16 rounded-2xl bg-[#00005B] border border-[#9999FF]/40 flex items-center justify-center font-heading font-black text-[#9999FF] text-2xl shadow-lg shadow-[#9999FF]/25 group-hover:scale-105 transition-transform shrink-0">
+                                        Ae
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white">Adobe After Effects</h3>
+                                        <p class="text-xs font-mono text-indigo-300 mt-1">Motion Graphics &amp; Visual Effects</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                                    Creating kinetic typography, 3D camera tracking, custom visual effects (VFX), compositing, title sequences, and intricate keyframe animations.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag text-xs">Motion Graphics</span>
+                                <span class="tag text-xs">Visual Effects</span>
+                                <span class="tag text-xs">Text Animation</span>
+                                <span class="tag text-xs">3D Tracking</span>
+                                <span class="tag text-xs">Compositing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         STEP 4: DaVinci Resolve
+                         ======================================================== -->
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border border-red-500/40 shadow-[0_0_35px_rgba(239,68,68,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(239,68,68,0.35)] flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-red-300 tracking-widest px-3 py-1 rounded-full bg-red-500/15 border border-red-500/30">
+                                        TOOL 04 / 08 &bull; COLOR GRADING
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Colorist</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="w-16 h-16 rounded-2xl bg-[#12151c] border border-red-500/40 flex items-center justify-center shadow-lg shadow-red-500/20 group-hover:scale-105 transition-transform shrink-0">
+                                        <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none">
+                                            <circle cx="50" cy="50" r="48" fill="#12151c"/>
+                                            <path d="M50 18 C65 18 72 32 60 45 C48 35 40 25 50 18 Z" fill="#FF3B30"/>
+                                            <path d="M78 68 C68 78 52 75 50 58 C62 55 72 58 78 68 Z" fill="#34C759"/>
+                                            <path d="M22 65 C18 50 30 40 45 48 C40 60 32 68 22 65 Z" fill="#007AFF"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white">DaVinci Resolve</h3>
+                                        <p class="text-xs font-mono text-red-300 mt-1">Professional Color Grading &amp; Finishing</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                                    Professional node-based color grading, primary/secondary color correction, color wheels, film stock LUTs, dynamic range balancing, and visual finishing.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag text-xs">Color Grading</span>
+                                <span class="tag text-xs">Color Correction</span>
+                                <span class="tag text-xs">LUTs &amp; Nodes</span>
+                                <span class="tag text-xs">Color Wheels</span>
+                                <span class="tag text-xs">Film Emulation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         STEP 5: Adobe Photoshop
+                         ======================================================== -->
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border border-blue-500/40 shadow-[0_0_35px_rgba(59,130,246,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(59,130,246,0.35)] flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-blue-300 tracking-widest px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30">
+                                        TOOL 05 / 08 &bull; GRAPHICS &amp; THUMBNAILS
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">High-CTR Design</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="w-16 h-16 rounded-2xl bg-[#001E36] border border-[#31A8FF]/40 flex items-center justify-center font-heading font-black text-[#31A8FF] text-2xl shadow-lg shadow-[#31A8FF]/20 group-hover:scale-105 transition-transform shrink-0">
+                                        Ps
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-bold text-white">Adobe Photoshop</h3>
+                                        <p class="text-xs font-mono text-blue-300 mt-1">High-CTR Thumbnails &amp; Cutouts</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                                    Crafting high-converting YouTube thumbnails, subject cutouts, matte painting, layer-based asset design, photo retouching, and creative compositions.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag text-xs">Thumbnail Design</span>
+                                <span class="tag text-xs">Image Manipulation</span>
+                                <span class="tag text-xs">Photo Retouching</span>
+                                <span class="tag text-xs">Compositions</span>
+                                <span class="tag text-xs">Layer Masking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         STEP 6: Adobe Illustrator & Lightroom
+                         ======================================================== -->
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border border-orange-500/40 shadow-[0_0_35px_rgba(249,115,22,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(249,115,22,0.35)] flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-orange-300 tracking-widest px-3 py-1 rounded-full bg-orange-500/15 border border-orange-500/30">
+                                        TOOL 06 / 08 &bull; VECTOR &amp; PHOTO
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Assets &amp; Presets</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-14 h-14 rounded-2xl bg-[#330000] border border-[#FF9A00]/40 flex items-center justify-center font-heading font-black text-[#FF9A00] text-xl shadow-lg group-hover:scale-105 transition-transform shrink-0">
+                                            Ai
+                                        </div>
+                                        <div class="w-14 h-14 rounded-2xl bg-[#001E36] border border-[#31A8FF]/40 flex items-center justify-center font-heading font-black text-[#31A8FF] text-xl shadow-lg group-hover:scale-105 transition-transform shrink-0">
+                                            Lr
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">Illustrator &amp; Lightroom</h3>
+                                        <p class="text-xs font-mono text-orange-300 mt-1">Vector Graphics &amp; Photo Enhancement</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                                    Designing scalable vector lower-thirds, brand logos, typography accents, alongside photo retouching and color temperature curation.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag text-xs">Vector Assets</span>
+                                <span class="tag text-xs">Logo Design</span>
+                                <span class="tag text-xs">Photo Enhancement</span>
+                                <span class="tag text-xs">Typography</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         STEP 7: Adobe Audition & Media Encoder
+                         ======================================================== -->
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border border-emerald-500/40 shadow-[0_0_35px_rgba(16,185,129,0.2)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_55px_rgba(16,185,129,0.35)] flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-emerald-300 tracking-widest px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30">
+                                        TOOL 07 / 08 &bull; AUDIO &amp; ENCODING
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Mastering &amp; Export</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="flex items-center gap-2">
+                                        <div class="w-14 h-14 rounded-2xl bg-[#001E36] border border-[#00E699]/40 flex items-center justify-center font-heading font-black text-[#00E699] text-xl shadow-lg group-hover:scale-105 transition-transform shrink-0">
+                                            Au
+                                        </div>
+                                        <div class="w-14 h-14 rounded-2xl bg-[#00005B] border border-[#FF7700]/40 flex items-center justify-center font-heading font-black text-[#FF7700] text-xl shadow-lg group-hover:scale-105 transition-transform shrink-0">
+                                            Me
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl sm:text-2xl font-heading font-bold text-white">Audition &amp; Encoder</h3>
+                                        <p class="text-xs font-mono text-emerald-300 mt-1">Audio Clean-up &amp; Video Exporting</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
+                                    Vocal audio clean-up, studio noise suppression, sound mastering, along with high-bitrate ProRes/H.264 video rendering and multi-platform media encoding.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag text-xs">Audio Mastering</span>
+                                <span class="tag text-xs">Noise Reduction</span>
+                                <span class="tag text-xs">Media Encoder</span>
+                                <span class="tag text-xs">ProRes Exports</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================================
+                         STEP 8: Short-Form Viral Retention Mechanics
+                         ======================================================== -->
+                    <div class="tool-step-container min-h-[80vh] flex items-center justify-center lg:justify-end px-4 sm:px-8 lg:px-12 py-12">
+                        <div class="tool-step-card max-w-xl w-full p-8 sm:p-9 rounded-3xl bg-[rgba(10,14,20,0.88)] border-2 border-purple-500/50 shadow-[0_0_40px_rgba(168,85,247,0.25)] backdrop-blur-2xl transition-all duration-300 hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] flex flex-col justify-between group">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-xs font-mono font-bold text-purple-300 tracking-widest px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30">
+                                        TOOL 08 / 08 &bull; RETENTION ENGINE
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Viral Hooks</span>
+                                </div>
+                                <div class="flex items-center gap-4 mb-5 pb-5 border-b border-white/10">
+                                    <div class="w-16 h-16 rounded-2xl bg-purple-500/15 border-2 border-purple-500/50 flex items-center justify-center p-3 shadow-lg shadow-purple-500/25 group-hover:scale-105 transition-transform shrink-0 text-purple-400">
+                                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-heading font-extrabold text-white">
+                                            Viral <span class="text-purple-400">Retention Mechanics</span>
+                                        </h3>
+                                        <p class="text-xs font-mono text-purple-300 mt-1">
+                                            3-Second Hook Retention &bull; Velocity Curve &bull; Sound FX
+                                        </p>
+                                    </div>
+                                </div>
                                 <p class="text-gray-200 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
                                     Engineering maximum audience watch-time through algorithmic hook structures, dynamic speed ramping, bespoke impact sound effects, visual pacing, and seamless looping for Instagram Reels, TikTok, and YouTube Shorts.
                                 </p>
                             </div>
-
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag border-purple-500/40 text-purple-300 bg-purple-500/10 font-bold text-[11px]">3-Sec Hook System</span>
-                                <span class="tag border-purple-500/40 text-purple-300 bg-purple-500/10 font-bold text-[11px]">Dynamic Sound FX</span>
-                                <span class="tag border-purple-500/40 text-purple-300 bg-purple-500/10 font-bold text-[11px]">Velocity Curves</span>
-                                <span class="tag text-[11px]">Pacing &amp; Cuts</span>
-                                <span class="tag text-[11px]">Audience Retention</span>
-                                <span class="tag text-[11px]">Subtitles &amp; Popups</span>
+                            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                                <span class="tag border-purple-500/40 text-purple-300 bg-purple-500/10 font-bold text-xs">3-Sec Hook System</span>
+                                <span class="tag border-purple-500/40 text-purple-300 bg-purple-500/10 font-bold text-xs">Dynamic Sound FX</span>
+                                <span class="tag text-xs">Velocity Curves</span>
+                                <span class="tag text-xs">Pacing &amp; Cuts</span>
+                                <span class="tag text-xs">Audience Retention</span>
                             </div>
                         </div>
-
-                        <!-- 2. DaVinci Resolve -->
-                        <div class="tool-card-right float-right-ambient p-7 sm:p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-red-500/30 hover:border-red-400 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
-                            <div>
-                                <div class="w-14 h-14 rounded-2xl bg-[#12151c] border border-red-500/40 flex items-center justify-center shadow-lg shadow-red-500/20 mb-5 group-hover:scale-105 transition-transform">
-                                    <svg class="w-9 h-9" viewBox="0 0 100 100" fill="none">
-                                        <circle cx="50" cy="50" r="48" fill="#12151c"/>
-                                        <path d="M50 18 C65 18 72 32 60 45 C48 35 40 25 50 18 Z" fill="#FF3B30"/>
-                                        <path d="M78 68 C68 78 52 75 50 58 C62 55 72 58 78 68 Z" fill="#34C759"/>
-                                        <path d="M22 65 C18 50 30 40 45 48 C40 60 32 68 22 65 Z" fill="#007AFF"/>
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5">DaVinci Resolve</h3>
-                                <p class="text-xs font-mono text-red-300 mb-3 font-semibold">Professional Color Grading &amp; Finishing</p>
-                                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                                    Professional node-based color grading, primary/secondary color correction, color wheels, film stock LUTs, dynamic range balancing, and visual finishing.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag text-[11px]">Color Grading</span>
-                                <span class="tag text-[11px]">Color Correction</span>
-                                <span class="tag text-[11px]">LUTs &amp; Nodes</span>
-                                <span class="tag text-[11px]">Color Wheels</span>
-                            </div>
-                        </div>
-
-                        <!-- 3. Adobe Photoshop -->
-                        <div class="tool-card-right float-right-ambient p-7 sm:p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-blue-500/30 hover:border-blue-400 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
-                            <div>
-                                <div class="w-14 h-14 rounded-2xl bg-[#001E36] border border-[#31A8FF]/40 flex items-center justify-center font-heading font-black text-[#31A8FF] text-2xl shadow-lg shadow-[#31A8FF]/20 mb-5 group-hover:scale-105 transition-transform">
-                                    Ps
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5">Adobe Photoshop</h3>
-                                <p class="text-xs font-mono text-blue-300 mb-3 font-semibold">High-CTR Thumbnails &amp; Cutouts</p>
-                                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                                    Crafting high-converting YouTube thumbnails, subject cutouts, matte painting, layer-based asset design, photo retouching, and creative compositions.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag text-[11px]">Thumbnail Design</span>
-                                <span class="tag text-[11px]">Image Manipulation</span>
-                                <span class="tag text-[11px]">Photo Retouching</span>
-                                <span class="tag text-[11px]">Compositions</span>
-                            </div>
-                        </div>
-
-                        <!-- 4. Adobe Illustrator & Lightroom -->
-                        <div class="tool-card-right float-right-ambient p-7 sm:p-8 rounded-3xl bg-[rgba(10,13,18,0.85)] border border-orange-500/30 hover:border-orange-400 transition-all duration-300 hover:-translate-y-2 backdrop-blur-2xl shadow-xl flex flex-col justify-between group">
-                            <div>
-                                <div class="flex items-center gap-3 mb-5">
-                                    <div class="w-12 h-12 rounded-2xl bg-[#330000] border border-[#FF9A00]/40 flex items-center justify-center font-heading font-black text-[#FF9A00] text-xl shadow-lg group-hover:scale-105 transition-transform">
-                                        Ai
-                                    </div>
-                                    <div class="w-12 h-12 rounded-2xl bg-[#001E36] border border-[#31A8FF]/40 flex items-center justify-center font-heading font-black text-[#31A8FF] text-xl shadow-lg group-hover:scale-105 transition-transform">
-                                        Lr
-                                    </div>
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-heading font-bold text-white mb-1.5">Adobe Illustrator &amp; Lightroom</h3>
-                                <p class="text-xs font-mono text-orange-300 mb-3 font-semibold">Vector Graphics &amp; Photo Enhancement</p>
-                                <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-6 font-sans">
-                                    Designing scalable vector lower-thirds, brand logos, typography accents, alongside photo retouching and color temperature curation.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/10">
-                                <span class="tag text-[11px]">Vector Assets</span>
-                                <span class="tag text-[11px]">Logo Design</span>
-                                <span class="tag text-[11px]">Photo Enhancement</span>
-                                <span class="tag text-[11px]">Typography</span>
-                            </div>
-                        </div>
-
                     </div>
 
-                </div>
-
-                <!-- Secondary Specialized Audio & Export Tools Banner -->
-                <div class="p-6 sm:p-7 rounded-2xl bg-black/50 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <span class="w-3 h-3 rounded-full bg-[#9ae600] animate-pulse"></span>
-                        <span class="text-sm font-mono text-gray-200">
-                            <strong>Additional Specialized Tools:</strong> HandBrake, Topaz Video AI, Boris FX Continuum, Frame.io
-                        </span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="badge border-[#9ae600]/40 text-[#9ae600]">4K / 60FPS Render</span>
-                        <span class="badge">Lossless Codecs</span>
-                    </div>
                 </div>
 
             </section>

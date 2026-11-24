@@ -231,110 +231,77 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
-    // 1. Dynamic Face-Clearing Floating ScrollTrigger for Creative Editing Toolkit (#skills) & Portals
-    // As the user scrolls into the section where Dharshan's face is centered in the 3D canvas:
-    // Left wing cards float smoothly to the left, and right wing cards float to the right,
-    // parting dynamically in an elegant pattern so his face is completely clear and unobstructed!
-    if (typeof ScrollTrigger !== "undefined") {
-      ScrollTrigger.matchMedia({
-        // Large & Desktop Screens: Wide Face Corridor Parting
-        "(min-width: 1024px)": function() {
-          if (document.querySelector("#skills")) {
-            gsap.to(".tool-card-left", {
-              scrollTrigger: {
-                trigger: "#skills",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1.2
-              },
-              x: -130,
-              y: -20,
-              rotation: -2,
-              ease: "power1.out"
-            });
+    // 1. Sequential Appear & Disappear Scroll Animation for Creative Editing Toolkit (#skills)
+    // As the user scrolls down, each tool card appears smoothly from bottom, stays visible in the center,
+    // and then disappears completely as you scroll past it, leaving Dharshan's face 100% visible and unobstructed!
+    const toolStepContainers = document.querySelectorAll(".tool-step-container");
+    if (toolStepContainers.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+      toolStepContainers.forEach((step) => {
+        const card = step.querySelector(".tool-step-card");
+        if (!card) return;
 
-            gsap.to(".tool-card-right", {
-              scrollTrigger: {
-                trigger: "#skills",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1.2
-              },
-              x: 130,
-              y: 20,
-              rotation: 2,
-              ease: "power1.out"
-            });
-
-            gsap.to(".skills-header-panel", {
-              scrollTrigger: {
-                trigger: "#skills",
-                start: "top 85%",
-                end: "top 30%",
-                scrub: 1.2
-              },
-              y: -35,
-              opacity: 0.85,
-              ease: "power1.out"
-            });
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: step,
+            start: "top 85%",
+            end: "bottom 15%",
+            scrub: 1,
           }
+        })
+        .fromTo(card, 
+          { opacity: 0, y: 70, scale: 0.94 },
+          { opacity: 1, y: 0, scale: 1, ease: "power2.out", duration: 0.28 }
+        )
+        .to(card, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.44 // stays completely visible and readable in focus zone
+        })
+        .to(card, {
+          opacity: 0,
+          y: -70,
+          scale: 0.94,
+          ease: "power2.in",
+          duration: 0.28 // disappears completely!
+        });
+      });
+    }
 
-          if (document.querySelector("#specialized-portals")) {
-            gsap.to(".portal-card-left", {
-              scrollTrigger: {
-                trigger: "#specialized-portals",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1.2
-              },
-              x: -130,
-              y: -15,
-              rotation: -2,
-              ease: "power1.out"
-            });
-
-            gsap.to(".portal-card-right", {
-              scrollTrigger: {
-                trigger: "#specialized-portals",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1.2
-              },
-              x: 130,
-              y: 15,
-              rotation: 2,
-              ease: "power1.out"
-            });
-          }
+    // Skills Section Header Intro Fade-out
+    const introPanel = document.querySelector(".skills-intro-panel");
+    if (introPanel && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+      gsap.to(introPanel, {
+        scrollTrigger: {
+          trigger: introPanel,
+          start: "top 70%",
+          end: "bottom 20%",
+          scrub: 1
         },
+        opacity: 0,
+        y: -50,
+        ease: "power1.in"
+      });
+    }
 
-        // Tablet Screens
-        "(min-width: 768px) and (max-width: 1023px)": function() {
-          if (document.querySelector("#skills")) {
-            gsap.to(".tool-card-left", {
-              scrollTrigger: {
-                trigger: "#skills",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1.2
-              },
-              x: -50,
-              ease: "power1.out"
-            });
-
-            gsap.to(".tool-card-right", {
-              scrollTrigger: {
-                trigger: "#skills",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1.2
-              },
-              x: 50,
-              ease: "power1.out"
-            });
+    // Specialized Portals Fade Animation
+    if (document.querySelector("#specialized-portals") && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
+      gsap.fromTo("#specialized-portals .grid > div", 
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          stagger: 0.15,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: "#specialized-portals",
+            start: "top 85%",
+            end: "center 50%",
+            scrub: 1
           }
         }
-      });
+      );
     }
 
     // 3. Subtle 3D Card Tilt Interaction for Creative & AI Cards
