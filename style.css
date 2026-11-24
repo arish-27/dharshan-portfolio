@@ -1218,6 +1218,12 @@ canvas {
 .hud-card-slot {
     position: relative;
     z-index: 30;
+    min-height: 520px;
+}
+
+.hud-card {
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .tool-hud-card,
