@@ -233,99 +233,144 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Pinned Sequential Tool Cards HUD Showcase (#skills)
     // As the user scrolls through the pinned section:
-    // Only ONE card appears at a time on the right flank, stays readable, and then disappears completely (fades out to opacity 0).
+    // Only ONE card is shown at a time on the right flank, stays readable, and seamlessly cross-fades to the next card.
+    // Tool 01 (CapCut Specialist) is active immediately on arrival so there is ZERO blank gap!
     // Dharshan's face on the left is 100% visible and NEVER covered at any point!
     const hudCards = gsap.utils.toArray("#skills .tool-hud-card");
     if (hudCards.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 
-      // Set initial state: all cards completely invisible
-      gsap.set(hudCards, { opacity: 0, y: 35, scale: 0.95, pointerEvents: "none" });
+      // Card 01 (CapCut Specialist) is immediately visible on arrival: ZERO empty screen!
+      gsap.set(hudCards[0], { opacity: 1, y: 0, scale: 1, pointerEvents: "auto" });
+      // Subsequent cards start hidden below
+      if (hudCards.length > 1) {
+        gsap.set(hudCards.slice(1), { opacity: 0, y: 25, scale: 0.96, pointerEvents: "none" });
+      }
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#skills",
           start: "top top",
-          end: "+=4000",
+          end: "+=2800",
           pin: true,
           scrub: 1,
           anticipatePin: 1
         }
       });
 
-      // Sequential animation: one by one appear, stay, and disappear!
+      // Seamless sequential cross-fade: zero blank gaps between cards!
       hudCards.forEach((card, index) => {
+        // Dwell: card stays fully visible for comfortable reading
         tl.to(card, {
           opacity: 1,
-          y: 0,
-          scale: 1,
-          pointerEvents: "auto",
-          duration: 0.35,
-          ease: "power2.out"
-        })
-          .to(card, {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.65 // stays visible for reading
-          })
-          .to(card, {
+          duration: 0.7
+        });
+
+        if (index < hudCards.length - 1) {
+          const nextCard = hudCards[index + 1];
+          // Outgoing card fades out & drifts slightly up
+          tl.to(card, {
             opacity: 0,
-            y: -35,
-            scale: 0.95,
+            y: -20,
+            scale: 0.96,
             pointerEvents: "none",
             duration: 0.35,
             ease: "power2.in"
+          })
+          // Incoming card simultaneously fades in & rises to center
+          .to(nextCard, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            pointerEvents: "auto",
+            duration: 0.35,
+            ease: "power2.out"
+          }, "<0.08"); // overlaps so card slot is NEVER empty!
+        } else {
+          // Last card (Card 08): stays visible until section unpins, then exits cleanly
+          tl.to(card, {
+            opacity: 1,
+            duration: 0.5
+          })
+          .to(card, {
+            opacity: 0,
+            y: -20,
+            scale: 0.96,
+            duration: 0.25,
+            ease: "power2.in"
           });
+        }
       });
     }
 
     // 2. Pinned Sequential Specialized Portals HUD Showcase (#specialized-portals)
     // As the user scrolls through the pinned section:
-    // Only ONE card appears at a time on the right flank, stays readable, and then disappears completely (fades out to opacity 0).
+    // Only ONE card is shown at a time on the right flank, stays readable, and seamlessly cross-fades.
+    // Portal 01 is active immediately on arrival so there is ZERO blank gap!
     // Dharshan's face on the left is 100% visible and NEVER covered at any point!
     const portalCards = gsap.utils.toArray("#specialized-portals .portal-hud-card");
     if (portalCards.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 
-      // Set initial state: all portal cards completely invisible
-      gsap.set(portalCards, { opacity: 0, y: 35, scale: 0.95, pointerEvents: "none" });
+      // Portal 01 is immediately visible on arrival: ZERO empty screen!
+      gsap.set(portalCards[0], { opacity: 1, y: 0, scale: 1, pointerEvents: "auto" });
+      if (portalCards.length > 1) {
+        gsap.set(portalCards.slice(1), { opacity: 0, y: 25, scale: 0.96, pointerEvents: "none" });
+      }
 
       const portalTl = gsap.timeline({
         scrollTrigger: {
           trigger: "#specialized-portals",
           start: "top top",
-          end: "+=1600",
+          end: "+=1100",
           pin: true,
           scrub: 1,
           anticipatePin: 1
         }
       });
 
-      // Sequential animation: one by one appear, stay, and disappear!
+      // Seamless sequential cross-fade for portals
       portalCards.forEach((card, index) => {
         portalTl.to(card, {
           opacity: 1,
-          y: 0,
-          scale: 1,
-          pointerEvents: "auto",
-          duration: 0.35,
-          ease: "power2.out"
-        })
-          .to(card, {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.65 // stays visible for reading and clicking
-          })
-          .to(card, {
+          duration: 0.8
+        });
+
+        if (index < portalCards.length - 1) {
+          const nextCard = portalCards[index + 1];
+          portalTl.to(card, {
             opacity: 0,
-            y: -35,
-            scale: 0.95,
+            y: -20,
+            scale: 0.96,
             pointerEvents: "none",
             duration: 0.35,
             ease: "power2.in"
+          })
+          .to(nextCard, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            pointerEvents: "auto",
+            duration: 0.35,
+            ease: "power2.out"
+          }, "<0.08");
+        } else {
+          // Last portal card: stays readable until section unpins
+          portalTl.to(card, {
+            opacity: 1,
+            duration: 0.5
+          })
+          .to(card, {
+            opacity: 0,
+            y: -20,
+            scale: 0.96,
+            duration: 0.25,
+            ease: "power2.in"
           });
+        }
       });
     }
+
+    // Refresh ScrollTrigger so all pin spacers and measurements are frame-perfect
+    ScrollTrigger.refresh();
 
     // 3. Subtle 3D Card Tilt Interaction for Creative & AI Cards
     if (window.matchMedia("(pointer: fine)").matches) {

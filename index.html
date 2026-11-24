@@ -532,10 +532,10 @@
             <!-- Creative Editing Toolkit Section (Two-Wing Flanking Layout: Center Corridor Leaves Dharshan's Face 100% Unobstructed) -->
             <!-- Creative Editing Toolkit Section (Sequential Appear & Disappear HUD: Dharshan's Face is 100% Unobstructed) -->
             <!-- Creative Editing Toolkit Section (Pinned Sequential HUD: Cards Appear and Disappear One by One on the Right Flank) -->
-            <section id="skills" class="skills-pinned-stage relative" style="height: 4800px;">
+            <section id="skills" class="skills-pinned-stage relative w-full min-h-screen">
                 
-                <!-- Pinned Viewport Container (Fixed in place while user scrolls through the 4800px track) -->
-                <div class="skills-pinned-viewport w-full h-screen sticky top-0 flex flex-col justify-center px-4 sm:px-8 lg:px-16 pointer-events-none overflow-hidden z-20">
+                <!-- Pinned Viewport Container (GSAP ScrollTrigger pins this stage cleanly with zero empty gap) -->
+                <div class="skills-pinned-viewport w-full min-h-screen flex flex-col justify-center px-4 sm:px-8 lg:px-16 pointer-events-none overflow-hidden z-20">
                     
                     <!-- HUD Status Header (Top-Right Flank) -->
                     <div class="hud-top-bar w-full max-w-lg ml-auto mb-4 flex items-center justify-between text-xs font-mono text-gray-300 border-b border-white/10 pb-2.5 pointer-events-auto">
@@ -836,10 +836,10 @@
             </section>
 
             <!-- Specialized Video Portals Section (Pinned Sequential HUD: Cards Appear and Disappear One by One on the Right Flank, Dharshan's Face 100% Unobstructed) -->
-            <section id="specialized-portals" class="portals-pinned-stage relative" style="height: 2000px;">
+            <section id="specialized-portals" class="portals-pinned-stage relative w-full min-h-screen">
                 
-                <!-- Pinned Viewport Container (Fixed in place while user scrolls through track) -->
-                <div class="portals-pinned-viewport w-full h-screen sticky top-0 flex flex-col justify-center px-4 sm:px-8 lg:px-16 pointer-events-none overflow-hidden z-20">
+                <!-- Pinned Viewport Container (GSAP ScrollTrigger pins this stage cleanly with zero empty gap) -->
+                <div class="portals-pinned-viewport w-full min-h-screen flex flex-col justify-center px-4 sm:px-8 lg:px-16 pointer-events-none overflow-hidden z-20">
                     
                     <!-- HUD Status Header (Top-Right Flank) -->
                     <div class="hud-top-bar w-full max-w-lg ml-auto mb-4 flex items-center justify-between text-xs font-mono text-gray-300 border-b border-white/10 pb-2.5 pointer-events-auto">
