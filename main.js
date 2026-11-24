@@ -27,10 +27,10 @@ if (canvas) {
   // Ultra-smooth draw routine (no canvas resizing inside render loop)
   function renderImage(img) {
     if (!img || !img.complete || img.naturalWidth === 0) return;
-    
+
     const canvasWidth = canvas.width;
     const canvasHeight = canvas.height;
-    
+
     // Cover scale
     const scale = Math.max(canvasWidth / img.naturalWidth, canvasHeight / img.naturalHeight);
     const drawWidth = img.naturalWidth * scale;
@@ -75,9 +75,9 @@ if (canvas) {
   function onScroll() {
     const scrollTop = html.scrollTop || document.body.scrollTop;
     const maxScrollTop = html.scrollHeight - window.innerHeight;
-    
+
     if (maxScrollTop <= 0) return;
-    
+
     const scrollFraction = Math.max(0, Math.min(1, scrollTop / maxScrollTop));
     targetFrame = scrollFraction * (frameCount - 1);
   }
@@ -85,10 +85,10 @@ if (canvas) {
   // Continuous requestAnimationFrame loop with Smooth Lerp (Linear Interpolation)
   function animationLoop() {
     currentFrameIndex += (targetFrame - currentFrameIndex) * 0.18;
-    
+
     const frameToDraw = Math.max(0, Math.min(frameCount - 1, Math.round(currentFrameIndex)));
     let img = images[frameToDraw];
-    
+
     // If target frame is still loading, draw the nearest available loaded frame
     if (!img || !img.complete) {
       for (let offset = 1; offset <= 30; offset++) {
@@ -108,7 +108,7 @@ if (canvas) {
     if (img && img.complete) {
       renderImage(img);
     }
-    
+
     requestAnimationFrame(animationLoop);
   }
 
@@ -208,7 +208,7 @@ if (customCursor && cursorFollower && window.matchMedia("(pointer: fine)").match
 
   // Interactive Hover Effects on Links, Buttons, Cards, Inputs
   const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .video-card, .filter-btn, .creative-card, .creative-badge, .creative-icon-box, .ai-card, .ai-filter-btn, .ai-tag, .ai-icon-box, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
-  
+
   document.addEventListener("mouseover", (e) => {
     if (e.target.closest(interactiveSelectors)) {
       customCursor.classList.add("hovering");
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dharshan's face on the left is 100% visible and NEVER covered at any point!
     const hudCards = gsap.utils.toArray("#skills .tool-hud-card");
     if (hudCards.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-      
+
       // Set initial state: all cards completely invisible
       gsap.set(hudCards, { opacity: 0, y: 35, scale: 0.95, pointerEvents: "none" });
 
@@ -262,20 +262,20 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 0.35,
           ease: "power2.out"
         })
-        .to(card, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.65 // stays visible for reading
-        })
-        .to(card, {
-          opacity: 0,
-          y: -35,
-          scale: 0.95,
-          pointerEvents: "none",
-          duration: 0.35,
-          ease: "power2.in"
-        });
+          .to(card, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.65 // stays visible for reading
+          })
+          .to(card, {
+            opacity: 0,
+            y: -35,
+            scale: 0.95,
+            pointerEvents: "none",
+            duration: 0.35,
+            ease: "power2.in"
+          });
       });
     }
 
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dharshan's face on the left is 100% visible and NEVER covered at any point!
     const portalCards = gsap.utils.toArray("#specialized-portals .portal-hud-card");
     if (portalCards.length > 0 && typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-      
+
       // Set initial state: all portal cards completely invisible
       gsap.set(portalCards, { opacity: 0, y: 35, scale: 0.95, pointerEvents: "none" });
 
@@ -310,20 +310,20 @@ document.addEventListener("DOMContentLoaded", () => {
           duration: 0.35,
           ease: "power2.out"
         })
-        .to(card, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.65 // stays visible for reading and clicking
-        })
-        .to(card, {
-          opacity: 0,
-          y: -35,
-          scale: 0.95,
-          pointerEvents: "none",
-          duration: 0.35,
-          ease: "power2.in"
-        });
+          .to(card, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.65 // stays visible for reading and clicking
+          })
+          .to(card, {
+            opacity: 0,
+            y: -35,
+            scale: 0.95,
+            pointerEvents: "none",
+            duration: 0.35,
+            ease: "power2.in"
+          });
       });
     }
 

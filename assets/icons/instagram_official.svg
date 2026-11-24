@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="100%" height="100%">
+  <defs>
+    <!-- Authentic Instagram Official Brand Gradient -->
+    <radialGradient id="igRadial" cx="15%" cy="105%" r="125%">
+      <stop offset="0%" stop-color="#ffd521"/>
+      <stop offset="12%" stop-color="#f5a425"/>
+      <stop offset="35%" stop-color="#fa3b5a"/>
+      <stop offset="55%" stop-color="#e1306c"/>
+      <stop offset="75%" stop-color="#c13584"/>
+      <stop offset="90%" stop-color="#833ab4"/>
+      <stop offset="100%" stop-color="#405de6"/>
+    </radialGradient>
+  </defs>
+  <!-- Rounded App Icon Background -->
+  <rect width="256" height="256" rx="58" fill="url(#igRadial)"/>
+  
+  <!-- Official Instagram Glyph in Solid Clean White -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Camera Body Outline -->
+    <rect x="44" y="44" width="168" height="168" rx="46"/>
+    <!-- Center Lens Circle -->
+    <circle cx="128" cy="128" r="42"/>
+  </g>
+  <!-- Top Right Camera Flash / Sensor Dot -->
+  <circle cx="184" cy="72" r="11" fill="#FFFFFF"/>
+</svg>
