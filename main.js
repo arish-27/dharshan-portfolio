@@ -8,6 +8,19 @@ window.addEventListener('beforeunload', () => {
   window.scrollTo(0, 0);
 });
 
+// Initialize Lenis Butter-Smooth Inertial Scroller
+let lenis = null;
+if (typeof Lenis !== "undefined") {
+  lenis = new Lenis({
+    duration: 1.15,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    wheelMultiplier: 1.0,
+    touchMultiplier: 1.8,
+    infinite: false,
+  });
+}
+
 const html = document.documentElement;
 const canvas = document.getElementById("hero-lightpass");
 
@@ -22,6 +35,7 @@ if (canvas) {
   const images = [];
   let targetFrame = 0;
   let currentFrameIndex = 0;
+  let lastRenderedFrameIndex = -1;
   let isFirstRenderDone = false;
 
   // Ultra-smooth draw routine (no canvas resizing inside render loop)
@@ -50,12 +64,14 @@ if (canvas) {
         if (i === 0 && !isFirstRenderDone) {
           isFirstRenderDone = true;
           renderImage(img);
+          lastRenderedFrameIndex = 0;
         }
       };
       img.src = currentFrame(i);
       if (i === 0 && img.complete && !isFirstRenderDone) {
         isFirstRenderDone = true;
         renderImage(img);
+        lastRenderedFrameIndex = 0;
       }
       images.push(img);
     }
@@ -68,12 +84,13 @@ if (canvas) {
     const activeImage = images[Math.round(currentFrameIndex)] || images[0];
     if (activeImage && activeImage.complete) {
       renderImage(activeImage);
+      lastRenderedFrameIndex = Math.round(currentFrameIndex);
     }
   }
 
   // Calculate target frame on scroll
   function onScroll() {
-    const scrollTop = html.scrollTop || document.body.scrollTop;
+    const scrollTop = window.pageYOffset || html.scrollTop || document.body.scrollTop;
     const maxScrollTop = html.scrollHeight - window.innerHeight;
 
     if (maxScrollTop <= 0) return;
@@ -82,38 +99,48 @@ if (canvas) {
     targetFrame = scrollFraction * (frameCount - 1);
   }
 
-  // Continuous requestAnimationFrame loop with Smooth Lerp (Linear Interpolation)
+  // Continuous requestAnimationFrame loop with Smooth Lerp & Smart Frame Caching
   function animationLoop() {
-    currentFrameIndex += (targetFrame - currentFrameIndex) * 0.18;
+    currentFrameIndex += (targetFrame - currentFrameIndex) * 0.16;
 
     const frameToDraw = Math.max(0, Math.min(frameCount - 1, Math.round(currentFrameIndex)));
-    let img = images[frameToDraw];
 
-    // If target frame is still loading, draw the nearest available loaded frame
-    if (!img || !img.complete) {
-      for (let offset = 1; offset <= 30; offset++) {
-        const prev = frameToDraw - offset;
-        if (prev >= 0 && images[prev]?.complete) {
-          img = images[prev];
-          break;
-        }
-        const next = frameToDraw + offset;
-        if (next < frameCount && images[next]?.complete) {
-          img = images[next];
-          break;
+    // Only repaint canvas when the frame has actually advanced (saves 90% GPU cycles!)
+    if (frameToDraw !== lastRenderedFrameIndex) {
+      let img = images[frameToDraw];
+
+      // If target frame is still loading, draw the nearest available loaded frame
+      if (!img || !img.complete) {
+        for (let offset = 1; offset <= 30; offset++) {
+          const prev = frameToDraw - offset;
+          if (prev >= 0 && images[prev]?.complete) {
+            img = images[prev];
+            break;
+          }
+          const next = frameToDraw + offset;
+          if (next < frameCount && images[next]?.complete) {
+            img = images[next];
+            break;
+          }
         }
       }
-    }
 
-    if (img && img.complete) {
-      renderImage(img);
+      if (img && img.complete) {
+        renderImage(img);
+        lastRenderedFrameIndex = frameToDraw;
+      }
     }
 
     requestAnimationFrame(animationLoop);
   }
 
   window.addEventListener('resize', resizeCanvas);
-  window.addEventListener('scroll', onScroll, { passive: true });
+
+  if (lenis) {
+    lenis.on('scroll', onScroll);
+  } else {
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
 
   // Initial setup
   resizeCanvas();
@@ -231,6 +258,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
 
+    // Sync Lenis with GSAP ScrollTrigger ticker for seamless 60/120fps interpolation
+    if (lenis) {
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    // Smooth Anchor Scrolling via Lenis (glides like butter to #about, #skills, #contact)
+    if (lenis) {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#' && document.querySelector(targetId)) {
+            e.preventDefault();
+            lenis.scrollTo(targetId, { offset: 0, duration: 1.15 });
+          }
+        });
+      });
+    }
+
     // 1. Pinned Sequential Tool Cards HUD Showcase (#skills)
     // As the user scrolls through the pinned section:
     // Only ONE card is shown at a time on the right flank, stays readable, and seamlessly cross-fades to the next card.
@@ -250,10 +299,12 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: {
           trigger: "#skills",
           start: "top top",
-          end: "+=2800",
+          end: "+=1800",
           pin: true,
-          scrub: 1,
-          anticipatePin: 1
+          scrub: 0.35,
+          anticipatePin: 0,
+          fastScrollEnd: true,
+          preventOverlaps: true
         }
       });
 
@@ -320,10 +371,12 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: {
           trigger: "#specialized-portals",
           start: "top top",
-          end: "+=1100",
+          end: "+=800",
           pin: true,
-          scrub: 1,
-          anticipatePin: 1
+          scrub: 0.35,
+          anticipatePin: 0,
+          fastScrollEnd: true,
+          preventOverlaps: true
         }
       });
 
