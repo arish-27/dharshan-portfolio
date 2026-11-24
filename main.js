@@ -207,7 +207,7 @@ if (customCursor && cursorFollower && window.matchMedia("(pointer: fine)").match
   requestAnimationFrame(updateCursorLoop);
 
   // Interactive Hover Effects on Links, Buttons, Cards, Inputs
-  const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .creative-card, .creative-badge, .creative-icon-box, .ai-card, .ai-filter-btn, .ai-tag, .ai-icon-box, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
+  const interactiveSelectors = 'a, button, input, textarea, select, [role="button"], .project-card, .video-card, .filter-btn, .creative-card, .creative-badge, .creative-icon-box, .ai-card, .ai-filter-btn, .ai-tag, .ai-icon-box, .stats-card, .testimonial-card, .badge, .tag, .section-badge-pill';
   
   document.addEventListener("mouseover", (e) => {
     if (e.target.closest(interactiveSelectors)) {

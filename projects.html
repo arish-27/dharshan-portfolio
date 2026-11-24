@@ -69,6 +69,14 @@
 
 <body class="min-h-screen flex flex-col justify-between selection:bg-[#9ae600] selection:text-black">
 
+    <!-- Custom Video Editor Cursor: ▶ with Click Blinking -->
+    <div id="custom-cursor" class="custom-cursor">
+        <div id="cursor-badge" class="cursor-badge">
+            ▶
+        </div>
+    </div>
+    <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
     <!-- Top Navigation Bar -->
     <header class="site-header fixed top-0 left-0 w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -536,5 +544,8 @@
             }
         });
     </script>
+
+    <!-- Main Script for Custom Cursor & Micro-Interactions -->
+    <script src="main.js?v=dharshan-frames-773"></script>
 </body>
 </html>
