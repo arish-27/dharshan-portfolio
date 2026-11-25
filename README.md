@@ -66,8 +66,8 @@ dharshan-portfolio/
 ## 📬 Contact & Inquiries
 
 - **Direct Email:** [dharshan.edits@gmail.com](mailto:dharshan.edits@gmail.com)
-- **Instagram:** [@dharshan.edits](https://instagram.com/)
-- **WhatsApp:** Available for fast-turnaround video project inquiries
+- **Instagram:** [@dharshhh.__j](https://www.instagram.com/dharshhh.__j/?utm_source=ig_web_button_share_sheet)
+- **Phone & WhatsApp:** [+91 70101 78837](https://wa.me/917010178837?text=Hi%20Dharshan,%20I%20saw%20your%20Video%20Editing%20portfolio%20and%20would%20love%20to%20discuss%20a%20video%20project!) (`tel:+917010178837`)
 
 ---
 
